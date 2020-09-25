@@ -1,0 +1,10 @@
+.MainLayout {
+  width: 100% !important;
+  min-height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: aquamarine;
+
+  display: flex !important;
+	flex-direction: column;
+}

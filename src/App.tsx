@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 // import logo from './logo.svg';
 import './App.css'
+import MainLayout from './Layouts/MainLayout/MainLayout'
 import { RootState } from './Redux'
 import { AppState } from './Redux/interfaces/interfaces'
 
@@ -10,14 +11,12 @@ interface AppProps {
 }
 
 class App extends React.Component<AppProps, AppState> {
-  componentDidMount() {
-    console.log(this.props.app)
-  }
+  componentDidMount() {}
 
   render() {
     return (
       <div className="App">
-        <h1>KebabWorld</h1>
+        <MainLayout children={this.props.children} />
       </div>
     )
   }
