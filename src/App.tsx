@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 // import logo from './logo.svg';
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import MainLayout from './Layouts/MainLayout/MainLayout'
 import { RootState } from './Redux'
 import { AppState } from './Redux/interfaces/interfaces'

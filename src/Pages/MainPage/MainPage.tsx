@@ -1,5 +1,5 @@
-import { Grid } from '@material-ui/core'
 import React from 'react'
+import { Container } from 'react-bootstrap'
 import './MainPage.scss'
 
 interface MainPageProps {}
@@ -9,9 +9,9 @@ interface MainPageState {}
 class MainPage extends React.Component<MainPageProps, MainPageState> {
   render() {
     return(
-      <Grid className="MainPage">
+      <Container fluid className="MainPage">
         MainPage
-      </Grid>
+      </Container>
     )
   }
 }

@@ -1,5 +1,5 @@
-import { Grid } from '@material-ui/core'
 import React from 'react'
+import { Container } from 'react-bootstrap'
 import MainPage from '../../Pages/MainPage/MainPage'
 import Footer from '../LayoutsComponents/Footer/Footer'
 import Header from '../LayoutsComponents/Header/Header'
@@ -12,11 +12,11 @@ interface MainLayoutState {}
 class MainLayout extends React.Component<MainLayoutProps, MainLayoutState> {
   render() {
     return (
-      <Grid className="MainLayout">
+      <Container fluid className="MainLayout p-0 m-0">
         <Header />
         <MainPage />
         <Footer />
-      </Grid>
+      </Container>
     )
   }
 }

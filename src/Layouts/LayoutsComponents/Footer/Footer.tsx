@@ -1,5 +1,5 @@
-import { Grid } from '@material-ui/core'
 import React from 'react'
+import { Container } from 'react-bootstrap'
 import './Footer.scss'
 
 interface FooterProps {}
@@ -9,9 +9,9 @@ interface FooterState {}
 class Footer extends React.Component<FooterProps, FooterState> {
   render() {
     return(
-      <Grid className="Footer">
+      <Container fluid className="Footer">
         Footer
-      </Grid>
+      </Container>
     )
   }
 }
