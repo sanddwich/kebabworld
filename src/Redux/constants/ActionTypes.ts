@@ -1,0 +1,1 @@
+export const GET_APP = '@APP/GET_APP'
