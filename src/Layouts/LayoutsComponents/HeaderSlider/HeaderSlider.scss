@@ -1,8 +1,101 @@
 .HeaderSlider {
-
   .swiperFullElements {
-    height: 50px;
-    
+    height: 80px;
 
+    .swiper-pagination-bullet {
+      border: 1px solid #454545;
+      box-sizing: border-box;
+      width: 12px;
+      height: 12px;
+      background-color: none !important;
+      margin-right: 5px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #ff2c33;
+    }
+
+    #nextSlideFull {
+      img {
+        transform: translate(20%, 0);
+      }
+    }
+
+    #prevSlideFull {
+      img {
+        transform: translate(-20%, 0);
+      }
+    }
+
+    #nextSlideFull,
+    #prevSlideFull,
+    #nextSlideMob,
+    #prevSlideMob {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      z-index: 100;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: #474747;
+
+      -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+
+      img {
+        width: 10px;
+      }
+
+      &:hover {
+        background-color: #535353;
+      }
+    }
+
+    .swiperFullElements__lineCont {
+      width: 30%;
+      // margin-left: -2.5%;
+    }
+
+    .swiperFullElements__line {
+      position: absolute;
+      width: 25%;
+      margin-top: -3px;
+      border-bottom: 1px solid #454545;
+    }
+
+    #paginationFull {
+      width: 35%;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .swiperFullElements__lineCont {
+      width: 25% !important;
+      margin-left: 0 !important;
+    }
+
+    .swiperFullElements__line {
+      width: 20% !important;
+      margin-top: -3px;
+      border-bottom: 1px solid #454545;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .swiperFullElements__lineCont {
+      width: 20% !important;
+      margin-left: 0 !important;
+    }
+
+    .swiperFullElements__line {
+      width: 15% !important;
+      margin-top: -3px;
+      border-bottom: 1px solid #454545;
+    }
   }
 }

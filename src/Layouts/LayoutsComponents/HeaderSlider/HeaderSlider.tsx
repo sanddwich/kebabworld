@@ -12,7 +12,7 @@ import 'swiper/components/navigation/navigation.scss'
 import 'swiper/components/pagination/pagination.scss'
 
 // install Swiper components
-SwiperCore.use([Navigation])
+SwiperCore.use([Navigation, Pagination])
 
 interface Slide {
   name: string
@@ -23,6 +23,7 @@ interface HeaderSliderProps {}
 
 interface HeaderSliderState {
   slides: Slide[]
+  slidesMobile: Slide[]
 }
 
 class HeaderSlider extends React.Component<HeaderSliderProps, HeaderSliderState> {
@@ -51,43 +52,110 @@ class HeaderSlider extends React.Component<HeaderSliderProps, HeaderSliderState>
           name: 'slide1.jpg',
         },
       ],
+      slidesMobile: [
+        {
+          id: Math.random(),
+          name: 'slide1_mob.jpg',
+        },
+        {
+          id: Math.random(),
+          name: 'slide1_mob.jpg',
+        },
+        {
+          id: Math.random(),
+          name: 'slide1_mob.jpg',
+        },
+        {
+          id: Math.random(),
+          name: 'slide1_mob.jpg',
+        },
+        {
+          id: Math.random(),
+          name: 'slide1_mob.jpg',
+        },
+      ],
     }
   }
 
   render() {
     return (
-      <Container fluid className="HeaderSlider p-0">
-        <Swiper
-          loop={true}
-          navigation={{
-            nextEl: '#nextSlideFull',
-            prevEl: '#prewSlideFull',
-          }}
-          pagination={{ clickable: true, el: '#paginationFull' }}
-        >
-          {this.state.slides.map((slide, index) => {
-            return (
-              <SwiperSlide key={slide.id} virtualIndex={index}>
-                <img className="image-fluid" src={`img/slider/${slide.name}`} alt="" width="100%" />
-              </SwiperSlide>
-            )
-          })}
-        </Swiper>
+      <Container fluid className="p-0 m-0">
+        <Container fluid className="HeaderSlider d-none d-sm-block p-0">
+          <Swiper
+            loop={true}
+            navigation={{
+              nextEl: '#nextSlideFull',
+              prevEl: '#prevSlideFull',
+            }}
+            pagination={{ clickable: true, el: '#paginationFull' }}
+          >
+            {this.state.slides.map((slide, index) => {
+              return (
+                <SwiperSlide key={slide.id} virtualIndex={index}>
+                  <img className="image-fluid" src={`img/slider/${slide.name}`} alt="" width="100%" />
+                </SwiperSlide>
+              )
+            })}
+          </Swiper>
 
-        <Container>
-          <Row>            
-            <Col className="swiperFullElements d-flex justify-content-between">
-              <div className="swiperFullElements__lineCont">
-                <div className="swiperFullElements__line"></div>
-              </div>
-              <div id="#nextSlideFull"><img src="img/slider/left.svg" alt=""/></div>
-              <div id="#paginationFull"></div>
-              <div id="#prewSlideFull"><img src="img/slider/right.svg" alt=""/></div>
-              <div className="swiperFullElements__lineCont">
-                <div className="swiperFullElements__line"></div>
-              </div>
-            </Col>
-          </Row>
+          <Container>
+            <Row>
+              <Col className="swiperFullElements d-flex justify-content-between align-items-center">
+                <div className="swiperFullElements__lineCont" style={{ textAlign: 'left' }}>
+                  <div className="swiperFullElements__line"></div>
+                </div>
+                <div id="prevSlideFull">
+                  <img src="img/slider/left.svg" alt="" />
+                </div>
+                <div id="paginationFull"></div>
+                <div id="nextSlideFull">
+                  <img src="img/slider/right.svg" alt="" />
+                </div>
+                <div className="swiperFullElements__lineCont d-flex justify-content-end">
+                  <div className="swiperFullElements__line"></div>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </Container>
+
+        <Container fluid className="HeaderSlider d-block d-sm-none p-0">
+          <Swiper
+            loop={true}
+            navigation={{
+              nextEl: '#nextSlideMob',
+              prevEl: '#prevSlideMob',
+            }}
+            pagination={{ clickable: true, el: '#paginationMob' }}
+          >
+            {this.state.slidesMobile.map((slide, index) => {
+              return (
+                <SwiperSlide key={slide.id} virtualIndex={index}>
+                  <img className="image-fluid" src={`img/slider/${slide.name}`} alt="" width="100%" />
+                </SwiperSlide>
+              )
+            })}
+          </Swiper>
+
+          <Container>
+            <Row>
+              <Col className="swiperFullElements d-flex justify-content-between align-items-center">
+                <div className="swiperFullElements__lineCont" style={{ textAlign: 'left' }}>
+                  <div className="swiperFullElements__line"></div>
+                </div>
+                <div id="prevSlideMob">
+                  <img src="img/slider/left.svg" alt="" />
+                </div>
+                <div id="paginationMob"></div>
+                <div id="nextSlideMob">
+                  <img src="img/slider/right.svg" alt="" />
+                </div>
+                <div className="swiperFullElements__lineCont d-flex justify-content-end">
+                  <div className="swiperFullElements__line"></div>
+                </div>
+              </Col>
+            </Row>
+          </Container>
         </Container>
       </Container>
     )
