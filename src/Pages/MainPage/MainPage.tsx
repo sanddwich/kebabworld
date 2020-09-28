@@ -6,10 +6,12 @@ interface MainPageProps {}
 
 interface MainPageState {}
 
+const background: string = "img/fon/back.img"
+
 class MainPage extends React.Component<MainPageProps, MainPageState> {
   render() {
     return(
-      <Container fluid className="MainPage">
+      <Container fluid className="MainPage" style={{backgroundImage: `url(${background})`}}>
         MainPage
       </Container>
     )

@@ -1,10 +1,17 @@
 .MainLayout {
   width: 100% !important;
   min-height: 100%;
+  // height:2000px;
   overflow: hidden;
   box-sizing: border-box;
-  background-color: aquamarine;
+  background-color: #303030;
+  color: #ffffff;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 
   display: flex !important;
-	flex-direction: column;
+  flex-direction: column;
 }

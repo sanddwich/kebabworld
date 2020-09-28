@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap'
 import MainPage from '../../Pages/MainPage/MainPage'
 import Footer from '../LayoutsComponents/Footer/Footer'
 import Header from '../LayoutsComponents/Header/Header'
+import HeaderSlider from '../LayoutsComponents/HeaderSlider/HeaderSlider'
 import './MainLayout.scss'
 
 interface MainLayoutProps {}
@@ -14,6 +15,7 @@ class MainLayout extends React.Component<MainLayoutProps, MainLayoutState> {
     return (
       <Container fluid className="MainLayout p-0 m-0">
         <Header />
+        <HeaderSlider />
         <MainPage />
         <Footer />
       </Container>
