@@ -86,7 +86,7 @@
   line-height: 19px;
   &:hover {
     cursor: pointer;
-    opacity: 0.8;
+    color: #ff2c33;
   }
 }
 
@@ -110,6 +110,9 @@
 
 .Header__navlink {
   cursor: pointer;
+  &:hover {
+    color: #ff2c33;
+  }
 }
 
 .active {
