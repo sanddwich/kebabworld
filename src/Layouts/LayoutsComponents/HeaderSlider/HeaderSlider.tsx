@@ -100,7 +100,7 @@ class HeaderSlider extends React.Component<HeaderSliderProps, HeaderSliderState>
 
           <Container>
             <Row>
-              <Col className="swiperFullElements d-flex justify-content-between align-items-center">
+              <Col className="swiperFullElements d-flex justify-content-between align-items-center p-0">
                 <div className="swiperFullElements__lineCont" style={{ textAlign: 'left' }}>
                   <div className="swiperFullElements__line"></div>
                 </div>
