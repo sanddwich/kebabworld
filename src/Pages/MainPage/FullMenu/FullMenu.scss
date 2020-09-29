@@ -1,4 +1,7 @@
 .FullMenu {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+
   .FullMenu__catCont {
     padding-bottom: 50px !important;
   }
@@ -16,6 +19,7 @@
   .FullMenu__img {
     img {
       width: 100%;
+      // padding-top: 30px;
       // border: 1px solid #707070;
     }
   }
@@ -32,7 +36,7 @@
       padding-bottom: 10px !important;
       border-bottom: 1px solid #707070;
 
-      margin-left: 80px !important;
+      margin-left: 80px;
       // text-transform: uppercase;
     }
   }
@@ -44,11 +48,18 @@
     font-size: 30px;
     line-height: 35px;
     padding-bottom: 20px !important;
+    padding-left: 90px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .FullMenu__item {
     margin-left: 0px !important;
+  }
+
+  .FullMenu__img {
+    img {
+      padding-bottom: 30px;
+    }
   }
 }

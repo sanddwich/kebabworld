@@ -955,12 +955,12 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               )}
 
               <Row className="FullMenu__cat p-0 m-0">
-                <Col md={4} className="FullMenu__img p-0 m-0 d-flex justify-content-center align-items-center">
+                <Col md={4} className="FullMenu__img p-0 m-0 d-flex justify-content-center align-items-start">
                   {category.images !== '' ? <img src={`img/fullmenu/${category.images}`} alt="" /> : ''}
                 </Col>
                 <Col md={8} className="FullMenu__items p-0 m-0">
                   <Row>
-                    <Col className="FullMenu__itemTitle p-0">{category.name}</Col>
+                    <Col className="FullMenu__itemTitle">{category.name}</Col>
                   </Row>
 
                   {category.products.map((product, index) => {
