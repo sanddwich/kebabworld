@@ -7,6 +7,34 @@ interface DishMenuProps {}
 interface DishMenuState {}
 
 export default class DishMenu extends React.Component<DishMenuProps, DishMenuState> {
+  constructor(props) {
+    super(props)
+    this.state = {
+      slidesMobile: [
+        {
+          id: Math.random(),
+          name: 'slide1_mob.jpg',
+        },
+        {
+          id: Math.random(),
+          name: 'slide1_mob.jpg',
+        },
+        {
+          id: Math.random(),
+          name: 'slide1_mob.jpg',
+        },
+        {
+          id: Math.random(),
+          name: 'slide1_mob.jpg',
+        },
+        {
+          id: Math.random(),
+          name: 'slide1_mob.jpg',
+        },
+      ],
+    }
+  }
+
   render() {
     return (
       <Container className="DishMenu p-0">
@@ -61,6 +89,10 @@ export default class DishMenu extends React.Component<DishMenuProps, DishMenuSta
               </Col>
             </Row>
           </Col>
+        </Row>
+
+        <Row className="DishMenu__mobile p-0 d-flex d-md-none">
+
         </Row>
       </Container>
     )
