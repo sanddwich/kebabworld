@@ -5,7 +5,7 @@ import Variant from './Variant'
 export default interface Product {
   facets?: Facet[]
   id: number
-  image: string
+  image?: string
   ingredients?: string
   isDeleted?: boolean
   modifiers?: Modifier[]
@@ -15,6 +15,6 @@ export default interface Product {
   seoText?: string
   seoTitle?: string
   variants?: Variant[]
-  weight: number
+  weight: number | string
   price: number
 }

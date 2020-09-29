@@ -1,19 +1,21 @@
 import Product from './Product'
 
 export default interface Category {
-  additionalInfo: string
-  description: string
+  additionalInfo?: string
+  description?: string
   id: number
   images: string
-  isDeleted: boolean
-  isIcludedInMenu: boolean
+  isDeleted?: boolean
+  isIcludedInMenu?: boolean
   name: string
-  order: number
+  order?: number
   products: Product[]
-  seoDescription: string
-  seoKeywords: string
-  seoText: string
-  seoTitle: string
-  tags: string
+  seoDescription?: string
+  seoKeywords?: string
+  seoText?: string
+  seoTitle?: string
+  tags?: string
   active?: boolean
+
+  menuGroup: string
 }
