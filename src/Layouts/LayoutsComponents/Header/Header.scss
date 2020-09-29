@@ -29,7 +29,7 @@
 
   .Header__navlinkcont {
     border-bottom: 1px solid #454545;
-    
+
     div {
       height: 100%;
       display: inline-block;
@@ -84,6 +84,10 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
 }
 
 .FullMenuItem__logotitle {

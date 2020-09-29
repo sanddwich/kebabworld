@@ -13,7 +13,7 @@ class Delivery extends React.Component<DeliveryProps, DeliveryState> {
     return (
       // <div className="delivery "  style={{ backgroundImage: `url(${background})` }}>
 
-      <Container className="delivery ml-3 mr-3 ml-md-auto mr-md-auto">
+      <Container id="delivery" className="delivery ml-3 mr-3 ml-md-auto mr-md-auto">
         <div className="row m-0 p-0">
           <div className="col-lg-7 m-0 p-0 delivery__info">
             <h3 className="delivery__title">Захотели есть, но нет желания выходить из дома?</h3>

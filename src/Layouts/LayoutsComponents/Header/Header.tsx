@@ -1,6 +1,7 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import MobileHeader from '../MobileHeader/MobileHeader'
+import { Link } from 'react-scroll'
 import './Header.scss'
 
 interface HeaderProps {}
@@ -83,7 +84,9 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                 </Col>
                 <Col xs={7} className="p-0 m-0 d-flex align-items-center justify-content-start">
                   <div>
-                    <div className="FullMenuItem__title2">О доставке</div>
+                    <Link activeClass="active" to="delivery" spy={true} smooth={true} offset={0} duration={500}>
+                      <div className="FullMenuItem__title2">О доставке</div>
+                    </Link>
                   </div>
                 </Col>
               </Row>
@@ -135,9 +138,8 @@ class Header extends React.Component<HeaderProps, HeaderState> {
             </Col>
           </Row>
         </Container>
-        
-        <MobileHeader />
 
+        <MobileHeader />
       </Container>
     )
   }

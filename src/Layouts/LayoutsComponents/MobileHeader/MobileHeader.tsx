@@ -1,6 +1,7 @@
 import React from 'react'
 import { Row } from 'react-bootstrap'
 import { Col, Container } from 'react-bootstrap'
+import { Link } from 'react-scroll'
 import './MobileHeader.scss'
 
 interface Submenu {
@@ -142,7 +143,11 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
               <img src="img/menu/car.svg" alt="" width="17px" />
             </div>
             <div>
-              <div className="toggleMenu__title">О доставке</div>
+              <div className="toggleMenu__title">
+                <Link activeClass="active" to="delivery" spy={true} smooth={true} offset={0} duration={500}>
+                  О доставке
+                </Link>
+              </div>
             </div>
           </Col>
         </Row>
@@ -174,7 +179,7 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
 
   render() {
     return (
-      <Container fluid className="p-0 m-0 d-block d-md-none">
+      <Container fluid className="p-0 m-0 d-block d-md-none ">
         <Row className="MobileHeader p-0 m-0 h-100 d-flex justify-content-center align-items-center">
           <Col xs={4} className="p-0 m-0">
             <div>
