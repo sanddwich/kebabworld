@@ -4,6 +4,7 @@ import AdditionalFeature from './AdditionalFeature/AdditionalFeature'
 import DishMenu from './DishMenu/DishMenu'
 import MapBlock from './Map/MapBlock'
 import './MainPage.scss'
+import FullMenu from './FullMenu/FullMenu'
 
 interface MainPageProps {}
 
@@ -17,6 +18,7 @@ class MainPage extends React.Component<MainPageProps, MainPageState> {
       <Container fluid className="MainPage m-0 p-0" style={{ backgroundImage: `url(${background})` }}>
         <DishMenu />
         <AdditionalFeature />
+        <FullMenu />
         <MapBlock />
       </Container>
     )
