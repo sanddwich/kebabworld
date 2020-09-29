@@ -12,7 +12,13 @@ class MapBlock extends React.Component<MapBlockProps, MapBlockState> {
     return (
       <Container fluid className="map m-0 p-0">
         <YMaps>
-          <Map className="map__yandex" defaultState={{ center: [55.75, 37.57], zoom: 9 }} />
+          <Map
+            className="map__yandex"
+            defaultState={{
+              center: [46.400285, 48.09156],
+              zoom: 17,
+            }}
+          />
         </YMaps>
       </Container>
     )
