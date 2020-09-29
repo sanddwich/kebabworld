@@ -1,3 +1,16 @@
-.Footer {
-  background-color: chocolate;
+.footer {
+  background-color: #303030;
+  height: 100px;
+  font-family: 'Roboto';
+  padding-top: 40px;
+
+  &__copyright {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 300;
+    &__link {
+      color: white;
+      font-weight: 500;
+    }
+  }
 }
