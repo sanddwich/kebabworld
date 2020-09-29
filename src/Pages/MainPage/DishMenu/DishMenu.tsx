@@ -7,7 +7,7 @@ interface DishMenuProps {}
 interface DishMenuState {}
 
 export default class DishMenu extends React.Component<DishMenuProps, DishMenuState> {
-  constructor(props) {
+  constructor(props: DishMenuProps) {
     super(props)
     this.state = {
       slidesMobile: [
