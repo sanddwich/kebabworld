@@ -5,6 +5,7 @@ import DishMenu from './DishMenu/DishMenu'
 import MapBlock from './Map/MapBlock'
 import './MainPage.scss'
 import FullMenu from './FullMenu/FullMenu'
+import Delivery from './Delivery/Delivery'
 
 interface MainPageProps {}
 
@@ -19,6 +20,7 @@ class MainPage extends React.Component<MainPageProps, MainPageState> {
         <DishMenu />
         <AdditionalFeature />
         <FullMenu />
+        <Delivery />
         <MapBlock />
       </Container>
     )

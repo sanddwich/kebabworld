@@ -1,2 +1,93 @@
 .delivery {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 55px;
+
+  &__invite {
+    margin-top: 100px;
+  }
+
+  &__info {
+    z-index: 10000;
+  }
+
+  &__title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  &__action {
+    font-size: 16px;
+    padding: 20px;
+
+    &__text {
+      font-size: 16px;
+      padding-top: 8px;
+      height: 50px;
+    }
+  }
+
+  &__cirlcle {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #ff2c33;
+    font-size: 24px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    float: left;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 23px;
+    padding: 20px 0;
+    color: #ffffff;
+  }
+
+  &__background {
+    width: 1528px;
+    height: 1325px;
+    position: absolute;
+    top: -350px;
+    left: -720px;
+    z-index: 0;
+  }
+
+  &__address {
+    line-height: 30px;
+    &__title {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .delivery__invite {
+    margin-top: 400px;
+  }
+  .delivery__background {
+    top: -520px;
+    left: -700px;
+  }
+}
+@media (max-width: 520px) {
+  .delivery__invite {
+    margin-top: 400px;
+  }
+  .delivery__background {
+    width: 1328px;
+    left: -690px;
+  }
 }
