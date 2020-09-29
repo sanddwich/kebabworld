@@ -86,7 +86,7 @@ export default class DishMenu extends React.Component<DishMenuProps, DishMenuSta
                 </div>
               </Col>
               <Col md={4} className="DishMenu__litlecat p-0 d-flex justify-content-center align-items-end">
-                <div style={{ marginTop: -200, cursor: 'pointer' }}>
+                <div style={{ marginTop: -100, cursor: 'pointer' }}>
                   <img style={{ marginBottom: -25 }} src="img/dish/second.png" alt="" />
                   <div className="DishMenu__litlecatTitle">Вторые блюда</div>
                 </div>
