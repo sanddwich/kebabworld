@@ -10,14 +10,10 @@ import 'swiper/swiper.scss'
 import 'swiper/swiper.scss'
 import 'swiper/components/navigation/navigation.scss'
 import 'swiper/components/pagination/pagination.scss'
+import Slide from '../../../Interfaces/Slide'
 
 // install Swiper components
 SwiperCore.use([Navigation, Pagination])
-
-interface Slide {
-  name: string
-  id: number
-}
 
 interface HeaderSliderProps {}
 

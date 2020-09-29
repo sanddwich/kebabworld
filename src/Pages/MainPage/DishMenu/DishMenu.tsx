@@ -2,9 +2,25 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import './DishMenu.scss'
 
+import { Swiper, SwiperSlide } from 'swiper/react'
+import SwiperCore, { Navigation, Pagination } from 'swiper'
+
+// Import Swiper styles
+import 'swiper/swiper.scss'
+// Import Swiper styles
+import 'swiper/swiper.scss'
+import 'swiper/components/navigation/navigation.scss'
+import 'swiper/components/pagination/pagination.scss'
+import Slide from '../../../Interfaces/Slide'
+
+// install Swiper components
+SwiperCore.use([Navigation, Pagination])
+
 interface DishMenuProps {}
 
-interface DishMenuState {}
+interface DishMenuState {
+  slidesMobile: Slide[]
+}
 
 export default class DishMenu extends React.Component<DishMenuProps, DishMenuState> {
   constructor(props: DishMenuProps) {
@@ -13,23 +29,38 @@ export default class DishMenu extends React.Component<DishMenuProps, DishMenuSta
       slidesMobile: [
         {
           id: Math.random(),
-          name: 'slide1_mob.jpg',
+          name: 'mangal.png',
+          title: 'Блюда на мангале',
         },
         {
           id: Math.random(),
-          name: 'slide1_mob.jpg',
+          name: 'first.png',
+          title: 'Первые блюда',
         },
         {
           id: Math.random(),
-          name: 'slide1_mob.jpg',
+          name: 'second.png',
+          title: 'Вторые блюда',
         },
         {
           id: Math.random(),
-          name: 'slide1_mob.jpg',
+          name: 'garnirs.png',
+          title: 'Гарниры',
         },
         {
           id: Math.random(),
-          name: 'slide1_mob.jpg',
+          name: 'salats.png',
+          title: 'Салаты',
+        },
+        {
+          id: Math.random(),
+          name: 'zakuson.png',
+          title: 'Закуски',
+        },
+        {
+          id: Math.random(),
+          name: 'drink.png',
+          title: 'Напитки',
         },
       ],
     }
@@ -55,8 +86,8 @@ export default class DishMenu extends React.Component<DishMenuProps, DishMenuSta
                 </div>
               </Col>
               <Col md={4} className="DishMenu__litlecat p-0 d-flex justify-content-center align-items-end">
-                <div style={{marginTop:-200, cursor: 'pointer' }}>
-                  <img style={{marginBottom:-25}} src="img/dish/second.png" alt="" />
+                <div style={{ marginTop: -200, cursor: 'pointer' }}>
+                  <img style={{ marginBottom: -25 }} src="img/dish/second.png" alt="" />
                   <div className="DishMenu__litlecatTitle">Вторые блюда</div>
                 </div>
               </Col>
@@ -92,7 +123,45 @@ export default class DishMenu extends React.Component<DishMenuProps, DishMenuSta
         </Row>
 
         <Row className="DishMenu__mobile p-0 d-flex d-md-none">
+          <Swiper
+            loop={true}
+            navigation={{
+              nextEl: '#nextMenuItem',
+              prevEl: '#prevMenuItem',
+            }}
+            pagination={{ clickable: true, el: '#paginationMenuItem' }}
+          >
+            {this.state.slidesMobile.map((slide, index) => {
+              return (
+                <SwiperSlide key={slide.id} virtualIndex={index}>
+                  <div style={{cursor: 'pointer' }}>
+                    <img className="image-fluid" src={`img/dish/slider/${slide.name}`} alt="" width="100%" />
+                    <div className="DishMenu__mobiletitle">{slide.title}</div>
+                  </div>
+                </SwiperSlide>
+              )
+            })}
+          </Swiper>
 
+          <Container>
+            <Row>
+              <Col className="swiperFullElements d-flex justify-content-between align-items-center">
+                <div className="swiperFullElements__lineCont" style={{ textAlign: 'left' }}>
+                  <div className="swiperFullElements__line"></div>
+                </div>
+                <div id="prevMenuItem">
+                  <img src="img/slider/left.svg" alt="" />
+                </div>
+                <div id="paginationMenuItem"></div>
+                <div id="nextMenuItem">
+                  <img src="img/slider/right.svg" alt="" />
+                </div>
+                <div className="swiperFullElements__lineCont d-flex justify-content-end">
+                  <div className="swiperFullElements__line"></div>
+                </div>
+              </Col>
+            </Row>
+          </Container>
         </Row>
       </Container>
     )
