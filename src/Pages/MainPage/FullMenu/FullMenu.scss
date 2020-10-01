@@ -3,7 +3,9 @@
   padding-bottom: 50px !important;
 
   .FullMenu__catCont {
+    display: block;
     padding-bottom: 50px !important;
+    min-height: 60vh;
   }
 
   .FullMenu__parentCatName {

@@ -1,9 +1,11 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import { Link } from 'react-scroll'
 import './DishMenu.scss'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination } from 'swiper'
+import { displayCategory } from '../../../Utils/utils'
 
 // Import Swiper styles
 import 'swiper/swiper.scss'
@@ -73,7 +75,18 @@ export default class DishMenu extends React.Component<DishMenuProps, DishMenuSta
           <Col md={4} className="DishMenu__bigcat h-100 p-0 d-flex justify-content-center align-items-center">
             <div style={{ marginTop: -100, cursor: 'pointer' }}>
               <img src="img/dish/mangal.png" alt="" />
-              <div className="DishMenu__title">Блюда на мангале</div>
+              <Link
+                activeClass="active"
+                to="kebab"
+                spy={true}
+                smooth={true}
+                onClick={() => displayCategory('kebab')}
+                delay={50}
+                offset={-250}
+                duration={500}
+              >
+                <div className="DishMenu__title">Блюда на мангале</div>
+              </Link>
             </div>
           </Col>
 
@@ -82,19 +95,52 @@ export default class DishMenu extends React.Component<DishMenuProps, DishMenuSta
               <Col md={4} className="DishMenu__litlecat p-0 d-flex justify-content-center align-items-end">
                 <div style={{ marginTop: -100, cursor: 'pointer' }}>
                   <img src="img/dish/first.png" alt="" />
-                  <div className="DishMenu__litlecatTitle">Блюда на мангале</div>
+                  <Link
+                    onClick={() => displayCategory('firstdish')}
+                    activeClass="active"
+                    to="firstdish"
+                    spy={true}
+                    smooth={true}
+                    delay={50}
+                    offset={-250}
+                    duration={500}
+                  >
+                    <div className="DishMenu__litlecatTitle">Первые блюда</div>
+                  </Link>
                 </div>
               </Col>
               <Col md={4} className="DishMenu__litlecat p-0 d-flex justify-content-center align-items-end">
                 <div style={{ marginTop: -100, cursor: 'pointer' }}>
                   <img style={{ marginBottom: -25 }} src="img/dish/second.png" alt="" />
-                  <div className="DishMenu__litlecatTitle">Вторые блюда</div>
+                  <Link
+                    onClick={() => displayCategory('seconddish')}
+                    activeClass="active"
+                    to="seconddish"
+                    spy={true}
+                    smooth={true}
+                    delay={50}
+                    offset={-250}
+                    duration={500}
+                  >
+                    <div className="DishMenu__litlecatTitle">Вторые блюда</div>
+                  </Link>
                 </div>
               </Col>
               <Col md={4} className="DishMenu__litlecat p-0 d-flex justify-content-center align-items-end">
                 <div style={{ marginTop: -100, cursor: 'pointer' }}>
                   <img src="img/dish/garnirs.png" alt="" />
-                  <div className="DishMenu__litlecatTitle">Гарниры</div>
+                  <Link
+                    onClick={() => displayCategory('garnirs')}
+                    activeClass="active"
+                    to="garnirs"
+                    spy={true}
+                    smooth={true}
+                    delay={50}
+                    offset={-250}
+                    duration={500}
+                  >
+                    <div className="DishMenu__litlecatTitle">Гарниры</div>
+                  </Link>
                 </div>
               </Col>
             </Row>
@@ -103,19 +149,52 @@ export default class DishMenu extends React.Component<DishMenuProps, DishMenuSta
               <Col md={4} className="DishMenu__litlecat p-0 d-flex justify-content-center align-items-end">
                 <div style={{ marginTop: -100, cursor: 'pointer' }}>
                   <img src="img/dish/salats.png" alt="" />
-                  <div className="DishMenu__litlecatTitle">Салаты</div>
+                  <Link
+                    onClick={() => displayCategory('salats')}
+                    activeClass="active"
+                    to="salats"
+                    spy={true}
+                    smooth={true}
+                    delay={50}
+                    offset={-250}
+                    duration={500}
+                  >
+                    <div className="DishMenu__litlecatTitle">Салаты</div>
+                  </Link>
                 </div>
               </Col>
               <Col md={4} className="DishMenu__litlecat p-0 d-flex justify-content-center align-items-end">
                 <div style={{ marginTop: -100, cursor: 'pointer' }}>
                   <img src="img/dish/zakuson.png" alt="" />
-                  <div className="DishMenu__litlecatTitle">Закуски</div>
+                  <Link
+                    onClick={() => displayCategory('snacks')}
+                    activeClass="active"
+                    to="snacks"
+                    spy={true}
+                    smooth={true}
+                    delay={50}
+                    offset={-250}
+                    duration={500}
+                  >
+                    <div className="DishMenu__litlecatTitle">Закуски</div>
+                  </Link>
                 </div>
               </Col>
               <Col md={4} className="DishMenu__litlecat p-0 d-flex justify-content-center align-items-end">
                 <div style={{ marginTop: -100, cursor: 'pointer' }}>
                   <img src="img/dish/drink.png" alt="" />
-                  <div className="DishMenu__litlecatTitle">Напитки</div>
+                  <Link
+                    onClick={() => displayCategory('drinks')}
+                    activeClass="active"
+                    to="drinks"
+                    spy={true}
+                    smooth={true}
+                    delay={50}
+                    offset={-250}
+                    duration={500}
+                  >
+                    <div className="DishMenu__litlecatTitle">Напитки</div>
+                  </Link>
                 </div>
               </Col>
             </Row>
@@ -134,7 +213,7 @@ export default class DishMenu extends React.Component<DishMenuProps, DishMenuSta
             {this.state.slidesMobile.map((slide, index) => {
               return (
                 <SwiperSlide key={slide.id} virtualIndex={index}>
-                  <div style={{cursor: 'pointer' }}>
+                  <div style={{ cursor: 'pointer' }}>
                     <img className="image-fluid" src={`img/dish/slider/${slide.name}`} alt="" width="100%" />
                     <div className="DishMenu__mobiletitle">{slide.title}</div>
                   </div>

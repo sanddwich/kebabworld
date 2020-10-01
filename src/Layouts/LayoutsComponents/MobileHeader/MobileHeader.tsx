@@ -3,6 +3,7 @@ import { Row } from 'react-bootstrap'
 import { Col, Container } from 'react-bootstrap'
 import { Link } from 'react-scroll'
 import './MobileHeader.scss'
+import { displayCategory } from '../../../Utils/utils'
 
 interface Submenu {
   name: string
@@ -49,7 +50,7 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
 
   renderToggleMenu = (): any => {
     return (
-      <Container className="toggleMenu p-0 m-0">
+      <Container id="toggle-menu" className="toggleMenu p-0 m-0">
         <Row className="pb-5">
           <Col
             onClick={() => this.activateSubMenu('menu')}
@@ -72,7 +73,21 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
                       <div className="toggleMenu__listItem">
                         <div className="listElement"></div>
                       </div>
-                      <div className="toggleMenu__listItemTitle">Блюда на мангале</div>
+                      <Link
+                        activeClass="active"
+                        to="kebab"
+                        spy={true}
+                        smooth={true}
+                        onClick={() => {
+                          displayCategory('kebab')
+                          this.closeOpenMenu()
+                        }}
+                        delay={50}
+                        offset={370}
+                        duration={500}
+                      >
+                        <div className="toggleMenu__listItemTitle">Блюда на мангале</div>
+                      </Link>
                     </Col>
                   </Row>
                   <Row>
@@ -80,7 +95,21 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
                       <div className="toggleMenu__listItem">
                         <div className="listElement"></div>
                       </div>
-                      <div className="toggleMenu__listItemTitle">Первые блюда</div>
+                      <Link
+                        activeClass="active"
+                        to="firstdish"
+                        spy={true}
+                        smooth={true}
+                        onClick={() => {
+                          displayCategory('firstdish')
+                          this.closeOpenMenu()
+                        }}
+                        delay={50}
+                        offset={370}
+                        duration={500}
+                      >
+                        <div className="toggleMenu__listItemTitle">Первые блюда</div>
+                      </Link>
                     </Col>
                   </Row>
                   <Row>
@@ -88,7 +117,21 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
                       <div className="toggleMenu__listItem">
                         <div className="listElement"></div>
                       </div>
-                      <div className="toggleMenu__listItemTitle">Вторые блюда</div>
+                      <Link
+                        activeClass="active"
+                        to="seconddish"
+                        spy={true}
+                        smooth={true}
+                        onClick={() => {
+                          displayCategory('seconddish')
+                          this.closeOpenMenu()
+                        }}
+                        delay={50}
+                        offset={370}
+                        duration={500}
+                      >
+                        <div className="toggleMenu__listItemTitle">Вторые блюда</div>
+                      </Link>
                     </Col>
                   </Row>
                   <Row>
@@ -96,7 +139,21 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
                       <div className="toggleMenu__listItem">
                         <div className="listElement"></div>
                       </div>
-                      <div className="toggleMenu__listItemTitle">Салаты</div>
+                      <Link
+                        activeClass="active"
+                        to="salats"
+                        spy={true}
+                        smooth={true}
+                        onClick={() => {
+                          displayCategory('salats')
+                          this.closeOpenMenu()
+                        }}
+                        delay={50}
+                        offset={370}
+                        duration={500}
+                      >
+                        <div className="toggleMenu__listItemTitle">Салаты</div>
+                      </Link>
                     </Col>
                   </Row>
                   <Row>
@@ -104,7 +161,21 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
                       <div className="toggleMenu__listItem">
                         <div className="listElement"></div>
                       </div>
-                      <div className="toggleMenu__listItemTitle">Гарниры</div>
+                      <Link
+                        activeClass="active"
+                        to="garnirs"
+                        spy={true}
+                        smooth={true}
+                        onClick={() => {
+                          displayCategory('garnirs')
+                          this.closeOpenMenu()
+                        }}
+                        delay={50}
+                        offset={370}
+                        duration={500}
+                      >
+                        <div className="toggleMenu__listItemTitle">Гарниры</div>
+                      </Link>
                     </Col>
                   </Row>
                   <Row>
@@ -112,7 +183,21 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
                       <div className="toggleMenu__listItem">
                         <div className="listElement"></div>
                       </div>
-                      <div className="toggleMenu__listItemTitle">Закуски</div>
+                      <Link
+                        activeClass="active"
+                        to="snacks"
+                        spy={true}
+                        smooth={true}
+                        onClick={() => {
+                          displayCategory('snacks')
+                          this.closeOpenMenu()
+                        }}
+                        delay={50}
+                        offset={370}
+                        duration={500}
+                      >
+                        <div className="toggleMenu__listItemTitle">Закуски</div>
+                      </Link>
                     </Col>
                   </Row>
                   <Row>
@@ -120,7 +205,21 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
                       <div className="toggleMenu__listItem">
                         <div className="listElement"></div>
                       </div>
-                      <div className="toggleMenu__listItemTitle">Напитки</div>
+                      <Link
+                        activeClass="active"
+                        to="drinks"
+                        spy={true}
+                        smooth={true}
+                        onClick={() => {
+                          displayCategory('drinks')
+                          this.closeOpenMenu()
+                        }}
+                        delay={50}
+                        offset={370}
+                        duration={500}
+                      >
+                        <div className="toggleMenu__listItemTitle">Напитки</div>
+                      </Link>
                     </Col>
                   </Row>
                   <Row>
@@ -128,7 +227,21 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
                       <div className="toggleMenu__listItem">
                         <div className="listElement"></div>
                       </div>
-                      <div className="toggleMenu__listItemTitle">Соусы</div>
+                      <Link
+                        activeClass="active"
+                        to="kebab"
+                        spy={true}
+                        smooth={true}
+                        onClick={() => {
+                          displayCategory('kebab')
+                          this.closeOpenMenu()
+                        }}
+                        delay={50}
+                        offset={370}
+                        duration={500}
+                      >
+                        <div className="toggleMenu__listItemTitle">Соусы</div>
+                      </Link>
                     </Col>
                   </Row>
                 </Container>
@@ -144,7 +257,15 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
             </div>
             <div>
               <div className="toggleMenu__title">
-                <Link activeClass="active" to="delivery" spy={true} smooth={true} offset={0} duration={500}>
+                <Link
+                  onClick={() => this.closeOpenMenu()}
+                  activeClass="active"
+                  to="delivery"
+                  spy={true}
+                  smooth={true}
+                  offset={-130}
+                  duration={500}
+                >
                   О доставке
                 </Link>
               </div>

@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 import MobileHeader from '../MobileHeader/MobileHeader'
 import { Link } from 'react-scroll'
 import './Header.scss'
+import { displayCategory } from '../../../Utils/utils'
 
 interface HeaderProps {}
 
@@ -43,8 +44,14 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                   </Col>
                   <Col xs={9} className="p-0 m-0 d-flex align-items-center justify-content-start">
                     <div>
-                      <div className="FullMenuItem__title">777-999</div>
-                      <div className="FullMenuItem__description">Работаем с 11:00 до 00:00</div>
+                      <div className="FullMenuItem__title">
+                        <span itemProp="telephone">777-999</span>
+                      </div>
+                      <div className="FullMenuItem__description">
+                        <time itemProp="openingHours" dateTime="Mo, Tu, We, Th, Fr, Sa, Su 11:00-24:00">
+                          Работаем с 11:00 до 00:00
+                        </time>
+                      </div>
                     </div>
                   </Col>
                 </Row>
@@ -60,7 +67,18 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                 </Col>
                 <Col xs={7} className="p-0 m-0 d-flex align-items-center justify-content-start">
                   <div>
-                    <div className="FullMenuItem__title2">Меню</div>
+                    <Link
+                      onClick={() => displayCategory('kebab')}
+                      activeClass="active"
+                      to="kebab"
+                      spy={true}
+                      smooth={true}
+                      offset={-250}
+                      delay={50}
+                      duration={500}
+                    >
+                      <div className="FullMenuItem__title2">Меню</div>
+                    </Link>
                   </div>
                 </Col>
               </Row>
@@ -84,7 +102,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                 </Col>
                 <Col xs={7} className="p-0 m-0 d-flex align-items-center justify-content-start">
                   <div>
-                    <Link activeClass="active" to="delivery" spy={true} smooth={true} offset={0} duration={500}>
+                    <Link activeClass="active" to="delivery" spy={true} smooth={true} offset={-250} duration={500}>
                       <div className="FullMenuItem__title2">О доставке</div>
                     </Link>
                   </div>
@@ -100,9 +118,14 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                   </div>
                 </Col>
                 <Col xs={9} className="p-0 m-0 d-flex align-items-center justify-content-start">
-                  <div>
-                    <div className="FullMenuItem__title">г.Астрахань</div>
-                    <div className="FullMenuItem__description">ул. Жилая 1</div>
+                  <div itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
+                    <div className="FullMenuItem__title">
+                      <span itemProp="addressLocality">г.Астрахань</span>
+                    </div>
+                    <div className="FullMenuItem__description">
+                      <span itemProp="streetAddress">ул. Жилая 1</span>
+                    </div>
+                    <meta itemProp="addressCountry" content="RU" />
                   </div>
                 </Col>
               </Row>
@@ -112,28 +135,116 @@ class Header extends React.Component<HeaderProps, HeaderState> {
           <Row className="Header__down p-0 m-0">
             <Col className="Header__navlinkcont d-flex justify-content-between">
               <div className="p-0 m-0 Header__navlink">
-                <div>Блюда на мангале</div>
+                <Link
+                  onClick={() => displayCategory('kebab')}
+                  activeClass="active"
+                  to="kebab"
+                  spy={true}
+                  smooth={true}
+                  offset={-250}
+                  delay={50}
+                  duration={500}
+                >
+                  <div>Блюда на мангале</div>
+                </Link>
               </div>
               <div className="p-0 m-0 Header__navlink">
-                <div>Первые блюда</div>
+                <Link
+                  onClick={() => displayCategory('firstdish')}
+                  activeClass="active"
+                  to="firstdish"
+                  spy={true}
+                  smooth={true}
+                  delay={50}
+                  offset={-250}
+                  duration={500}
+                >
+                  <div>Первые блюда</div>
+                </Link>
               </div>
               <div className="p-0 m-0 Header__navlink">
-                <div>Вторые блюда</div>
+                <Link
+                  onClick={() => displayCategory('seconddish')}
+                  activeClass="active"
+                  to="seconddish"
+                  spy={true}
+                  smooth={true}
+                  offset={-250}
+                  delay={50}
+                  duration={500}
+                >
+                  <div>Вторые блюда</div>
+                </Link>
               </div>
               <div className="p-0 m-0 Header__navlink">
-                <div>Салаты</div>
+                <Link
+                  onClick={() => displayCategory('salats')}
+                  activeClass="active"
+                  to="salats"
+                  spy={true}
+                  smooth={true}
+                  offset={-250}
+                  delay={50}
+                  duration={500}
+                >
+                  <div>Салаты</div>
+                </Link>
               </div>
               <div className="p-0 m-0 Header__navlink">
-                <div>Гарниры</div>
+                <Link
+                  onClick={() => displayCategory('garnirs')}
+                  activeClass="active"
+                  to="garnirs"
+                  spy={true}
+                  smooth={true}
+                  offset={-250}
+                  delay={50}
+                  duration={500}
+                >
+                  <div>Гарниры</div>
+                </Link>
               </div>
               <div className="p-0 m-0 Header__navlink">
-                <div>Закуски</div>
+                <Link
+                  onClick={() => displayCategory('snacks')}
+                  activeClass="active"
+                  to="snacks"
+                  spy={true}
+                  smooth={true}
+                  offset={-250}
+                  delay={50}
+                  duration={500}
+                >
+                  <div>Закуски</div>
+                </Link>
               </div>
               <div className="p-0 m-0 Header__navlink">
-                <div>Напитки</div>
+                <Link
+                  onClick={() => displayCategory('drinks')}
+                  activeClass="active"
+                  to="drinks"
+                  spy={true}
+                  smooth={true}
+                  offset={-250}
+                  delay={50}
+                  duration={500}
+                >
+                  <div>Напитки</div>
+                </Link>
               </div>
               <div className="p-0 m-0 Header__navlink">
-                <div>Соусы</div>
+                <Link
+                  onClick={() => displayCategory('kebab')}
+                  activeClass="active"
+                  to="kebab"
+                  spy={true}
+                  smooth={true}
+                  offset={-250}
+                  delay={50}
+                  duration={500}
+                >
+                  <div>Соусы</div>
+                </Link>
               </div>
             </Col>
           </Row>

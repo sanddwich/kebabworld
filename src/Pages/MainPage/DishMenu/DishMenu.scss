@@ -20,13 +20,13 @@
       width: 206px;
 
       &:hover + .DishMenu__title {
-        color: #fdff92;
+        color: #ff2c33;
       }
     }
 
     .DishMenu__title {
       &:hover {
-        color: #fdff92;
+        color: #ff2c33;
       }
     }
   }
@@ -47,13 +47,13 @@
           padding-top: 25px !important;
 
           &:hover {
-            color: #fdff92;
+            color: #ff2c33;
           }
         }
 
         img {
           &:hover + .DishMenu__litlecatTitle {
-            color: #fdff92;
+            color: #ff2c33;
           }
         }
       }
@@ -76,7 +76,6 @@
 // ========================================= Mobile Slider =============================================
 
 .DishMenu__mobile {
-  
   .DishMenu__mobiletitle {
     font-family: 'Raleway';
     font-style: normal;

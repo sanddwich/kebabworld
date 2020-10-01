@@ -17,8 +17,9 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
         {
           id: Math.random(),
           name: 'Шашлык',
-          menuGroup: 'Блюда на мангале',
+          menuGroup: '',
           images: 'kebab.png',
+          tags: 'kebab',
           products: [
             {
               id: Math.random(),
@@ -109,8 +110,9 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
         {
           id: Math.random(),
           name: 'Люля-кебаб',
-          menuGroup: 'Блюда на мангале',
+          menuGroup: '',
           images: 'lulya.png',
+          tags: 'lulya',
           products: [
             {
               id: Math.random(),
@@ -173,8 +175,9 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
         {
           id: Math.random(),
           name: 'Овощи',
-          menuGroup: 'Блюда на мангале',
+          menuGroup: '',
           images: 'veget.png',
+          tags: 'vegetables',
           products: [
             {
               id: Math.random(),
@@ -218,6 +221,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
           name: 'Первые блюда',
           menuGroup: '',
           images: 'first.png',
+          tags: 'firstdish',
           products: [
             {
               id: Math.random(),
@@ -275,6 +279,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
           name: 'Вторые блюда',
           images: 'second.png',
           menuGroup: '',
+          tags: 'seconddish',
           products: [
             {
               id: Math.random(),
@@ -360,6 +365,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
           name: 'Салаты',
           menuGroup: '',
           images: 'salats.png',
+          tags: 'salats',
           products: [
             {
               id: Math.random(),
@@ -462,6 +468,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
           name: 'Гарниры',
           menuGroup: '',
           images: 'garnirs.png',
+          tags: 'garnirs',
           products: [
             {
               id: Math.random(),
@@ -526,6 +533,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
           name: 'Закуски',
           menuGroup: '',
           images: 'zakuson.png',
+          tags: 'snacks',
           products: [
             {
               id: Math.random(),
@@ -688,6 +696,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
           name: 'Напитки',
           menuGroup: '',
           images: 'drink.png',
+          tags: 'drinks',
           products: [
             {
               id: Math.random(),
@@ -787,6 +796,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
           name: 'К чаю',
           menuGroup: '',
           images: '',
+          tags: 'tea',
           products: [
             {
               id: Math.random(),
@@ -830,6 +840,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
           name: 'Пиво разливное',
           menuGroup: '',
           images: '',
+          tags: 'bear',
           products: [
             {
               id: Math.random(),
@@ -894,6 +905,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
           name: 'К пиву',
           menuGroup: '',
           images: '',
+          tags: 'bearsnacks',
           products: [
             {
               id: Math.random(),
@@ -945,7 +957,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             firstCat = category.menuGroup
           }
           return (
-            <Container key={category.id+index} fluid className="FullMenu__catCont">
+            <Container id={`${category.tags}`} key={category.id + index} fluid className="FullMenu__catCont">
               {firstCat !== '' ? (
                 <Row className="FullMenu__parentCatName p-0 m-0">
                   <Col>{firstCat}</Col>
@@ -965,14 +977,19 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
 
                   {category.products.map((product, index) => {
                     return (
-                      <Row  key={product.id+index} className="FullMenu__item">
-                        <Col xs={6} className="p-0 d-flex justify-content-start">{product.name}</Col>
-                        <Col xs={3} className="p-0 d-flex justify-content-center">{product.weight}</Col>
-                        <Col xs={3} className="p-0 d-flex justify-content-end">{product.price.toFixed(0).toString()+' руб.'}</Col>
+                      <Row key={product.id + index} className="FullMenu__item">
+                        <Col xs={6} className="p-0 d-flex justify-content-start">
+                          {product.name}
+                        </Col>
+                        <Col xs={3} className="p-0 d-flex justify-content-center">
+                          {product.weight}
+                        </Col>
+                        <Col xs={3} className="p-0 d-flex justify-content-end">
+                          {product.price.toFixed(0).toString() + ' руб.'}
+                        </Col>
                       </Row>
                     )
                   })}
-
                 </Col>
               </Row>
             </Container>

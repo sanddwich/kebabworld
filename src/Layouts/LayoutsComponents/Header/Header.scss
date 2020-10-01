@@ -1,6 +1,8 @@
 .Header {
   background-color: #303030;
   color: #ffffff;
+  position: fixed;
+  z-index: 20000;
 
   .Header__pcmenu {
     height: 200px;

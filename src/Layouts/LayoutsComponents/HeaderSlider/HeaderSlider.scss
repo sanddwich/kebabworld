@@ -1,4 +1,5 @@
 .HeaderSlider {
+  margin-top: 200px;
   .swiperFullElements {
     height: 80px;
 
@@ -86,7 +87,7 @@
     }
   }
 
-  @media screen and (max-width: 500px) {
+  @media (max-width: 500px) {
     .swiperFullElements__lineCont {
       width: 20% !important;
       margin-left: 0 !important;
@@ -97,5 +98,11 @@
       margin-top: -3px;
       border-bottom: 1px solid #454545;
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .HeaderSlider {
+    margin-top: 125px;
   }
 }
