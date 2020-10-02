@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Container, Modal, Row } from 'react-bootstrap'
 import Category from '../../../Interfaces/Category'
 import './FullMenu.scss'
 
@@ -7,6 +7,8 @@ interface FullMenuProps {}
 
 interface FullMenuState {
   categories: Category[]
+  modal: boolean
+  modalImg: string
 }
 
 class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
@@ -24,9 +26,10 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             {
               id: Math.random(),
               name: 'из свинины',
-              price: 90.0,
+              price: 80.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -34,27 +37,30 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 150.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
-            {
-              id: Math.random(),
-              name: 'из говядины',
-              price: 120.0,
-              weight: '1/100',
-              ingredients: '',
-            },
+            // {
+            //   id: Math.random(),
+            //   name: 'из говядины',
+            //   price: 120.0,
+            //   weight: '1/100',
+            //   ingredients: '',
+            // },
             {
               id: Math.random(),
               name: 'ханский шашлык',
               price: 60.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
               name: 'из куриного филе',
-              price: 60.0,
+              price: 70.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -62,41 +68,44 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 60.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
               name: 'из куриных ножек',
-              price: 60.0,
+              price: 80.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
-            {
-              id: Math.random(),
-              name: 'из индейки',
-              price: 110.0,
-              weight: '1/100',
-              ingredients: '',
-            },
-            {
-              id: Math.random(),
-              name: 'из рыбы (сазан, сом, судак)',
-              price: 150.0,
-              weight: '1/100',
-              ingredients: '',
-            },
-            {
-              id: Math.random(),
-              name: 'креветки',
-              price: 50.0,
-              weight: '1шт',
-              ingredients: '',
-            },
+            // {
+            //   id: Math.random(),
+            //   name: 'из индейки',
+            //   price: 110.0,
+            //   weight: '1/100',
+            //   ingredients: '',
+            // },
+            // {
+            //   id: Math.random(),
+            //   name: 'из рыбы (сазан, сом, судак)',
+            //   price: 150.0,
+            //   weight: '1/100',
+            //   ingredients: '',
+            // },
+            // {
+            //   id: Math.random(),
+            //   name: 'креветки',
+            //   price: 50.0,
+            //   weight: '1шт',
+            //   ingredients: '',
+            // },
             {
               id: Math.random(),
               name: 'Соус красный',
               price: 60.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -104,6 +113,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 60.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
           ],
         },
@@ -117,51 +127,63 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             {
               id: Math.random(),
               name: 'из баранины',
-              price: 100.0,
+              price: 110.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
               name: 'из говядины',
-              price: 80.0,
+              price: 90.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
               name: 'из курицы',
-              price: 70.0,
+              price: 80.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
-              name: 'из индейки',
-              price: 110.0,
-              weight: '1/100',
-              ingredients: '',
-            },
-            {
-              id: Math.random(),
-              name: 'из рыбы (сазан)',
+              name: 'из свинины',
               price: 100.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
-            {
-              id: Math.random(),
-              name: 'из картошки',
-              price: 150.0,
-              weight: '1 шампур',
-              ingredients: '',
-            },
+            // {
+            //   id: Math.random(),
+            //   name: 'из индейки',
+            //   price: 110.0,
+            //   weight: '1/100',
+            //   ingredients: '',
+            // },
+            // {
+            //   id: Math.random(),
+            //   name: 'из рыбы (сазан)',
+            //   price: 100.0,
+            //   weight: '1/100',
+            //   ingredients: '',
+            // },
+            // {
+            //   id: Math.random(),
+            //   name: 'из картошки',
+            //   price: 150.0,
+            //   weight: '1 шампур',
+            //   ingredients: '',
+            // },
             {
               id: Math.random(),
               name: 'Соус красный',
               price: 60.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -169,6 +191,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 60.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
           ],
         },
@@ -182,16 +205,18 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             {
               id: Math.random(),
               name: 'запеченные грибы',
-              price: 70.0,
+              price: 80.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
               name: 'запеченный картофель',
-              price: 100.0,
+              price: 90.0,
               weight: '1 шампур',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -199,6 +224,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 50.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -206,6 +232,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 60.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -213,6 +240,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 60.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
           ],
         },
@@ -229,34 +257,39 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 160.0,
               weight: '1/300',
               ingredients: 'Баранина или говядина, картофель, лук, перец, морковь, помидоры, бульон, специи',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
               name: 'Жульен с курицей',
-              price: 150.0,
+              price: 220.0,
               weight: '1/200',
               ingredients: 'Куриное филе, грибы, лук, сыр',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
               name: 'Говядина в горшочке',
-              price: 135.0,
+              price: 230.0,
               weight: '1/300',
               ingredients: 'Мясо, картошка, бульон, зелень, грибы',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
               name: 'Свинина в горшочке',
-              price: 125.0,
+              price: 220.0,
               weight: '1/300',
               ingredients: 'Мясо, картошка, бульон, зелень, грибы',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
               name: 'Баранина в горшочке',
-              price: 145.0,
+              price: 240.0,
               weight: '1/300',
               ingredients: 'Мясо, картошка, бульон, зелень, грибы',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -264,6 +297,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 60.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -271,6 +305,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 60.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
           ],
         },
@@ -287,6 +322,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 75.0,
               weight: '1/200',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -294,6 +330,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 70.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -301,27 +338,31 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 65.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
-              name: 'Жаркое по домашнему (из говяджины)',
-              price: 100.0,
+              name: 'Жаркое по домашнему (из говядины)',
+              price: 200.0,
               weight: '1/200',
               ingredients: 'Мясо, лук, перец, помидоры, картофель',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
               name: 'Жаркое по домашнему (из свинины)',
-              price: 100.0,
+              price: 200.0,
               weight: '1/200',
               ingredients: 'Мясо, лук, перец, помидоры, картофель',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
               name: 'Жаркое по домашнему (из баранины)',
-              price: 120.0,
+              price: 220.0,
               weight: '1/200',
               ingredients: 'Мясо, лук, перец, помидоры, картофель',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -329,6 +370,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 250.0,
               weight: '1/220',
               ingredients: 'Свинина, лук, грибы, помидоры, сыр, майонез',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -336,6 +378,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 170.0,
               weight: '1/200',
               ingredients: 'Куриная грудка, овощи, сыр, майонез, перец болгарский',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -343,6 +386,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 150.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -350,6 +394,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 60.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -357,6 +402,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 60.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
           ],
         },
@@ -373,6 +419,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 250.0,
               weight: '1/200',
               ingredients: 'Говядина отварная, чернослив, сыр, грецкий орех, гранат, майонез, зелень',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -381,6 +428,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               weight: '1/200',
               ingredients:
                 'Лист салата, помидоры, огурцы, перец болгарский, оливки, маслины, сыр Фетакса, соус, оливковое масло, лук',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -388,27 +436,29 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 160.0,
               weight: '1/200',
               ingredients: 'Помидоры, огурцы, лук, зелень, майонез, сметана, масло',
+              image: 'kebab.png',
             },
-            {
-              id: Math.random(),
-              name: 'Шамбери',
-              price: 230.0,
-              weight: '1/200',
-              ingredients: 'Язык отварной, корнишоны маринованные, яйцо куриное, грецкий орех, соевый соус',
-            },
-            {
-              id: Math.random(),
-              name: 'Морская экзотика',
-              price: 250.0,
-              weight: '1/200',
-              ingredients: 'Морской коктейль, яйцо куриное, огурцы, лимон, майонез',
-            },
+            // {
+            //   id: Math.random(),
+            //   name: 'Шамбери',
+            //   price: 230.0,
+            //   weight: '1/200',
+            //   ingredients: 'Язык отварной, корнишоны маринованные, яйцо куриное, грецкий орех, соевый соус',
+            // },
+            // {
+            //   id: Math.random(),
+            //   name: 'Морская экзотика',
+            //   price: 250.0,
+            //   weight: '1/200',
+            //   ingredients: 'Морской коктейль, яйцо куриное, огурцы, лимон, майонез',
+            // },
             {
               id: Math.random(),
               name: 'Цезарь из курицы',
               price: 200.0,
               weight: '1/200',
               ingredients: 'Курица, сухари, лист салата, черри, грецкий орех, сыр, соус',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -416,6 +466,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 250.0,
               weight: '1/200',
               ingredients: 'Семга, сухари, лист салата, черри, грецкий орех, сыр, соус',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -423,6 +474,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 220.0,
               weight: '1/200',
               ingredients: 'Креветки королевские, сухари, лист салата, черри, сыр, соус',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -430,6 +482,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 200.0,
               weight: '1/200',
               ingredients: 'Говядина отварная, чернослив, сыр, грецкий орех, гранат, майонез',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -438,6 +491,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               weight: '1/220',
               ingredients:
                 'Куриная грудка, жареные шампиньоны, консервированный ананас, сладкий перец, варенное яйцо, майонез, перец',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -445,6 +499,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 200.0,
               weight: '1/200',
               ingredients: 'Капуста пекинская, огурцы, креветки очищенные, клюква, соус, оливковое масло',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -452,6 +507,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 180.0,
               weight: '1/200',
               ingredients: 'Курица отварная, огурцы, сыр, майонез, яйцо куриное, украшается перепелиными яйцами',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -460,6 +516,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               weight: '1/200',
               ingredients:
                 'Ветчина из индейки, сыр, перец болгарский, помидоры, оливки, маслины, соус, оливковое масло',
+              image: 'kebab.png',
             },
           ],
         },
@@ -473,9 +530,10 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             {
               id: Math.random(),
               name: 'Картофель фри',
-              price: 70.0,
+              price: 115.0,
               weight: '1/150',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -483,13 +541,15 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 60.0,
               weight: '1/200',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
               name: 'Картофель по-деревенски',
-              price: 80.0,
+              price: 115.0,
               weight: '1/200',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -497,6 +557,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 120.0,
               weight: '1/200',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -504,6 +565,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 50.0,
               weight: '1/200',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -511,6 +573,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 180.0,
               weight: '1/200',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -518,6 +581,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 60.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -525,6 +589,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 60.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
           ],
         },
@@ -541,6 +606,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 200.0,
               weight: '1/200',
               ingredients: 'Помидоры, огурцы, перец болгарский, зелень, маслины',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -548,6 +614,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 200.0,
               weight: '1/170',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -555,6 +622,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 160.0,
               weight: '1/250',
               ingredients: 'Помидоры, соус, сыр, оливки, зелень',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -562,6 +630,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 270.0,
               weight: '1/350',
               ingredients: 'Индейка, ветчина, колбаса сырокопченая, рулет куриный, буженина',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -569,27 +638,31 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 250.0,
               weight: '1/220',
               ingredients: 'Мраморный, гауда, маасдам',
+              image: 'kebab.png',
             },
-            {
-              id: Math.random(),
-              name: 'Рыбная нарезка',
-              price: 280.0,
-              weight: '1/300',
-              ingredients: 'Семга, балык',
-            },
-            {
-              id: Math.random(),
-              name: 'Язык говяжий',
-              price: 270.0,
-              weight: '1/200',
-              ingredients: 'Язык, грецкий орех, сметана',
-            },
+            // {
+            //   id: Math.random(),
+            //   name: 'Рыбная нарезка',
+            //   price: 280.0,
+            //   weight: '1/300',
+            //   ingredients: 'Семга, балык',
+            //   image: 'kebab.png',
+            // },
+            // {
+            //   id: Math.random(),
+            //   name: 'Язык говяжий',
+            //   price: 270.0,
+            //   weight: '1/200',
+            //   ingredients: 'Язык, грецкий орех, сметана',
+            //   image: 'kebab.png',
+            // },
             {
               id: Math.random(),
               name: 'Грибное лукошко',
               price: 180.0,
               weight: '1/200',
               ingredients: 'Грибы маринованные, лук зеленый, зелень',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -597,6 +670,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 100.0,
               weight: '1/200',
               ingredients: 'Огурцы соленые, перец острый, чеснок, черемша',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -604,6 +678,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 200.0,
               weight: '1/250',
               ingredients: 'Картошка, селедка, зеленый горошек, лук, лимон',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -611,6 +686,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 120.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -618,6 +694,15 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 270.0,
               weight: '1/450',
               ingredients: 'Яблоки, виноград, бананы, апельсины',
+              image: 'kebab.png',
+            },
+            {
+              id: Math.random(),
+              name: 'Шаурма из свинины',
+              price: 140.0,
+              weight: '1шт',
+              ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -625,6 +710,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 130.0,
               weight: '1шт',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -632,6 +718,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 140.0,
               weight: '1шт',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -639,6 +726,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 150.0,
               weight: '1шт',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -646,6 +734,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 30.0,
               weight: '1шт',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -653,6 +742,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 50.0,
               weight: '1шт',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -660,6 +750,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 70.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -667,6 +758,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 130.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -674,6 +766,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 120.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -681,6 +774,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 60.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -688,6 +782,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 60.0,
               weight: '1/100',
               ingredients: '',
+              image: 'kebab.png',
             },
           ],
         },
@@ -701,9 +796,10 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             {
               id: Math.random(),
               name: 'Соки натуральные',
-              price: 120.0,
+              price: 135.0,
               weight: '1л',
               ingredients: 'Томат, яблоко, персик, вишня, апельсин, мультифрукт, ананас',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -711,6 +807,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 75.0,
               weight: '0,5л',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -718,20 +815,23 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 80.0,
               weight: '0,5л',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
               name: 'Кубай (без газа)',
-              price: 30.0,
+              price: 50.0,
               weight: '0,5л',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
               name: 'BonAqua (без газа)',
-              price: 50.0,
+              price: 70.0,
               weight: '0,5л',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -739,20 +839,23 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 75.0,
               weight: '0,25л',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
               name: 'Coca-Cola',
-              price: 70.0,
+              price: 80.0,
               weight: '0,5л',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
               name: 'Coca-Cola',
-              price: 120.0,
+              price: 160.0,
               weight: '1л',
               ingredients: '',
+              image: 'kebab.png',
             },
             {
               id: Math.random(),
@@ -760,198 +863,222 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 70.0,
               weight: '0,5л',
               ingredients: '',
+              image: 'kebab.png',
             },
-            {
-              id: Math.random(),
-              name: 'Чай (Зеленый, черный)',
-              price: 30.0,
-              weight: '1 чашка',
-              ingredients: '',
-            },
-            {
-              id: Math.random(),
-              name: 'Чай (Зеленый, зеленый с жасмином, черный, с чабрецом, фруктовый)',
-              price: 150.0,
-              weight: '1 чайник',
-              ingredients: '',
-            },
-            {
-              id: Math.random(),
-              name: 'Кофе (расстворимый)',
-              price: 30.0,
-              weight: '1 чашка',
-              ingredients: '',
-            },
-            {
-              id: Math.random(),
-              name: 'Кофе (черный)',
-              price: 50.0,
-              weight: '1 чашка',
-              ingredients: '',
-            },
+            // {
+            //   id: Math.random(),
+            //   name: 'Чай (Зеленый, черный)',
+            //   price: 30.0,
+            //   weight: '1 чашка',
+            //   ingredients: '',
+            // },
+            // {
+            //   id: Math.random(),
+            //   name: 'Чай (Зеленый, зеленый с жасмином, черный, с чабрецом, фруктовый)',
+            //   price: 150.0,
+            //   weight: '1 чайник',
+            //   ingredients: '',
+            // },
+            // {
+            //   id: Math.random(),
+            //   name: 'Кофе (расстворимый)',
+            //   price: 30.0,
+            //   weight: '1 чашка',
+            //   ingredients: '',
+            // },
+            // {
+            //   id: Math.random(),
+            //   name: 'Кофе (черный)',
+            //   price: 50.0,
+            //   weight: '1 чашка',
+            //   ingredients: '',
+            // },
           ],
         },
-        {
-          id: Math.random(),
-          name: 'К чаю',
-          menuGroup: '',
-          images: '',
-          tags: 'tea',
-          products: [
-            {
-              id: Math.random(),
-              name: 'Варенье',
-              price: 70.0,
-              weight: '100г',
-              ingredients: 'Малина, смородина, клубника',
-            },
-            {
-              id: Math.random(),
-              name: 'Шорколад (молочный темный)',
-              price: 100.0,
-              weight: '100г',
-              ingredients: '',
-            },
-            {
-              id: Math.random(),
-              name: 'Чоко пай',
-              price: 40.0,
-              weight: '1шт',
-              ingredients: '',
-            },
-            {
-              id: Math.random(),
-              name: 'Пирожное',
-              price: 50.0,
-              weight: '1шт',
-              ingredients: '',
-            },
-            {
-              id: Math.random(),
-              name: 'Мороженое (сливочное, шоколадное)',
-              price: 50.0,
-              weight: '1/100',
-              ingredients: '',
-            },
-          ],
-        },
-        {
-          id: Math.random(),
-          name: 'Пиво разливное',
-          menuGroup: '',
-          images: '',
-          tags: 'bear',
-          products: [
-            {
-              id: Math.random(),
-              name: 'Балтика 7',
-              price: 100.0,
-              weight: '0,5л',
-              ingredients: '',
-            },
-            {
-              id: Math.random(),
-              name: 'Дон',
-              price: 100.0,
-              weight: '0,5л',
-              ingredients: '',
-            },
-            {
-              id: Math.random(),
-              name: 'Балтика 0',
-              price: 100.0,
-              weight: '0,5л',
-              ingredients: '',
-            },
-            {
-              id: Math.random(),
-              name: 'Бавария 0',
-              price: 115.0,
-              weight: '0,5л',
-              ingredients: '',
-            },
-            {
-              id: Math.random(),
-              name: 'Туборг',
-              price: 100.0,
-              weight: '0,5л',
-              ingredients: '',
-            },
-            {
-              id: Math.random(),
-              name: 'Холстен',
-              price: 100.0,
-              weight: '0,5л',
-              ingredients: '',
-            },
-            {
-              id: Math.random(),
-              name: 'Кроненберг',
-              price: 100.0,
-              weight: '0,5л',
-              ingredients: '',
-            },
-            {
-              id: Math.random(),
-              name: 'Гусь жатецкий (светлый/темный)',
-              price: 115.0,
-              weight: '0,5л',
-              ingredients: '',
-            },
-          ],
-        },
-        {
-          id: Math.random(),
-          name: 'К пиву',
-          menuGroup: '',
-          images: '',
-          tags: 'bearsnacks',
-          products: [
-            {
-              id: Math.random(),
-              name: 'Сухарики',
-              price: 50.0,
-              weight: '1/100',
-              ingredients: '',
-            },
-            {
-              id: Math.random(),
-              name: 'Чипсы',
-              price: 60.0,
-              weight: '1/100',
-              ingredients: '',
-            },
-            {
-              id: Math.random(),
-              name: 'Арахис',
-              price: 100.0,
-              weight: '1/100',
-              ingredients: '',
-            },
-            {
-              id: Math.random(),
-              name: 'Ставридка',
-              price: 150.0,
-              weight: '1/100',
-              ingredients: '',
-            },
-            {
-              id: Math.random(),
-              name: 'Кальмары сушеные',
-              price: 150.0,
-              weight: '1/100',
-              ingredients: '',
-            },
-          ],
-        },
+        // {
+        //   id: Math.random(),
+        //   name: 'К чаю',
+        //   menuGroup: '',
+        //   images: '',
+        //   tags: 'tea',
+        //   products: [
+        //     {
+        //       id: Math.random(),
+        //       name: 'Варенье',
+        //       price: 70.0,
+        //       weight: '100г',
+        //       ingredients: 'Малина, смородина, клубника',
+        //     },
+        //     {
+        //       id: Math.random(),
+        //       name: 'Шорколад (молочный темный)',
+        //       price: 100.0,
+        //       weight: '100г',
+        //       ingredients: '',
+        //     },
+        //     {
+        //       id: Math.random(),
+        //       name: 'Чоко пай',
+        //       price: 40.0,
+        //       weight: '1шт',
+        //       ingredients: '',
+        //     },
+        //     {
+        //       id: Math.random(),
+        //       name: 'Пирожное',
+        //       price: 50.0,
+        //       weight: '1шт',
+        //       ingredients: '',
+        //     },
+        //     {
+        //       id: Math.random(),
+        //       name: 'Мороженое (сливочное, шоколадное)',
+        //       price: 50.0,
+        //       weight: '1/100',
+        //       ingredients: '',
+        //     },
+        //   ],
+        // },
+        // {
+        //   id: Math.random(),
+        //   name: 'Пиво разливное',
+        //   menuGroup: '',
+        //   images: '',
+        //   tags: 'bear',
+        //   products: [
+        //     {
+        //       id: Math.random(),
+        //       name: 'Балтика 7',
+        //       price: 100.0,
+        //       weight: '0,5л',
+        //       ingredients: '',
+        //     },
+        //     {
+        //       id: Math.random(),
+        //       name: 'Дон',
+        //       price: 100.0,
+        //       weight: '0,5л',
+        //       ingredients: '',
+        //     },
+        //     {
+        //       id: Math.random(),
+        //       name: 'Балтика 0',
+        //       price: 100.0,
+        //       weight: '0,5л',
+        //       ingredients: '',
+        //     },
+        //     {
+        //       id: Math.random(),
+        //       name: 'Бавария 0',
+        //       price: 115.0,
+        //       weight: '0,5л',
+        //       ingredients: '',
+        //     },
+        //     {
+        //       id: Math.random(),
+        //       name: 'Туборг',
+        //       price: 100.0,
+        //       weight: '0,5л',
+        //       ingredients: '',
+        //     },
+        //     {
+        //       id: Math.random(),
+        //       name: 'Холстен',
+        //       price: 100.0,
+        //       weight: '0,5л',
+        //       ingredients: '',
+        //     },
+        //     {
+        //       id: Math.random(),
+        //       name: 'Кроненберг',
+        //       price: 100.0,
+        //       weight: '0,5л',
+        //       ingredients: '',
+        //     },
+        //     {
+        //       id: Math.random(),
+        //       name: 'Гусь жатецкий (светлый/темный)',
+        //       price: 115.0,
+        //       weight: '0,5л',
+        //       ingredients: '',
+        //     },
+        //   ],
+        // },
+        // {
+        //   id: Math.random(),
+        //   name: 'К пиву',
+        //   menuGroup: '',
+        //   images: '',
+        //   tags: 'bearsnacks',
+        //   products: [
+        //     {
+        //       id: Math.random(),
+        //       name: 'Сухарики',
+        //       price: 50.0,
+        //       weight: '1/100',
+        //       ingredients: '',
+        //     },
+        //     {
+        //       id: Math.random(),
+        //       name: 'Чипсы',
+        //       price: 60.0,
+        //       weight: '1/100',
+        //       ingredients: '',
+        //     },
+        //     {
+        //       id: Math.random(),
+        //       name: 'Арахис',
+        //       price: 100.0,
+        //       weight: '1/100',
+        //       ingredients: '',
+        //     },
+        //     {
+        //       id: Math.random(),
+        //       name: 'Ставридка',
+        //       price: 150.0,
+        //       weight: '1/100',
+        //       ingredients: '',
+        //     },
+        //     {
+        //       id: Math.random(),
+        //       name: 'Кальмары сушеные',
+        //       price: 150.0,
+        //       weight: '1/100',
+        //       ingredients: '',
+        //     },
+        //   ],
+        // },
       ],
+      modal: false,
+      modalImg: '',
     }
+  }
+
+  showImgDialog = (image: string): void => {
+    const modalImg = `img/products/${image}`
+    this.setState({ modal: true, modalImg})
+  }
+
+  closeImgDialog = (): void => {
+    this.setState({ modal: false })
+  }
+
+  renderModal = (): any => {
+    return (
+      <Modal id="modalCont" show={this.state.modal} onHide={() => this.closeImgDialog()} animation={false}>
+        <Modal.Body>
+          <img className="img-fluid" src={this.state.modalImg} alt="" width="100%"/>
+        </Modal.Body>
+      </Modal>
+    )
   }
 
   render() {
     let firstCat = 'Блюда на мангале'
     return (
       <Container className="FullMenu">
+        {this.renderModal()}
+
         {this.state.categories.map((category, index) => {
           if (category.menuGroup !== firstCat) {
             firstCat = category.menuGroup
@@ -977,17 +1104,32 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
 
                   {category.products.map((product, index) => {
                     return (
-                      <Row key={product.id + index} className="FullMenu__item">
-                        <Col xs={6} className="p-0 d-flex justify-content-start">
-                          {product.name}
-                        </Col>
-                        <Col xs={3} className="p-0 d-flex justify-content-center">
-                          {product.weight}
-                        </Col>
-                        <Col xs={3} className="p-0 d-flex justify-content-end">
-                          {product.price.toFixed(0).toString() + ' руб.'}
-                        </Col>
-                      </Row>
+                      <Container
+                        key={index}
+                        fluid
+                        className="FullMenu__itemCont m-0 p-0"
+                        onClick={() => {
+                          this.showImgDialog(product.image)
+                        }}
+                        style={{ cursor: 'pointer' }}
+                      >
+                        <Row key={product.id + index} className="FullMenu__item">
+                          <Col xs={6} className="p-0 d-flex justify-content-start">
+                            {product.name}
+                          </Col>
+                          <Col xs={3} className="p-0 d-flex justify-content-center">
+                            {product.weight}
+                          </Col>
+                          <Col xs={3} className="p-0 d-flex justify-content-end">
+                            {product.price.toFixed(0).toString() + ' руб.'}
+                          </Col>
+                        </Row>
+                        {product.ingredients !== '' && (
+                          <Row>
+                            <Col className="FullMenu__ingredients p-0">{product.ingredients}</Col>
+                          </Row>
+                        )}
+                      </Container>
                     )
                   })}
                 </Col>

@@ -13,7 +13,7 @@ interface MainLayoutState {}
 class MainLayout extends React.Component<MainLayoutProps, MainLayoutState> {
   render() {
     return (
-      <Container fluid className="MainLayout p-0 m-0">
+      <Container fluid className="MainLayout p-0 m-0"  id="siteBegin">
         <Header />
         <HeaderSlider />
         <MainPage />

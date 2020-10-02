@@ -26,6 +26,11 @@
     }
   }
 
+  .FullMenu__itemCont {
+    position: relative;
+    z-index: 11000;
+  }
+
   .FullMenu__items {
     font-family: 'Raleway';
     font-style: normal;
@@ -52,6 +57,38 @@
     padding-bottom: 20px !important;
     padding-left: 90px;
   }
+
+  .FullMenu__ingredients {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #9d9d9d;
+
+    margin-left: 100px;
+    padding-top: 2px !important;
+  }
+}
+
+.modal {
+  z-index: 30000;
+}
+
+#modalCont {
+  margin-top: 100px;
+  max-width: 800px;
+  height: 100%;
+
+  .modal-body {
+    border: none;
+    background-color: #303030 !important;
+
+    -webkit-box-shadow: 0px 0px 5px 0px #242424;
+    -moz-box-shadow: 0px 0px 5px 0px#242424;
+    box-shadow: 0px 0px 5px 0px #242424;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -63,5 +100,13 @@
     img {
       padding-bottom: 30px;
     }
+  }
+
+  .FullMenu__ingredients {
+    margin-left: 10px !important;
+  }
+
+  #modalCont {
+    margin-top: 400px;
   }
 }

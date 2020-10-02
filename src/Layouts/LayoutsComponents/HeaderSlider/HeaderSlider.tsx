@@ -30,44 +30,54 @@ class HeaderSlider extends React.Component<HeaderSliderProps, HeaderSliderState>
         {
           id: Math.random(),
           name: 'slide1.jpg',
+          tags: ''
         },
         {
           id: Math.random(),
           name: 'slide1.jpg',
+          tags: ''
         },
         {
           id: Math.random(),
           name: 'slide1.jpg',
+          tags: ''
         },
         {
           id: Math.random(),
           name: 'slide1.jpg',
+          tags: ''
         },
         {
           id: Math.random(),
           name: 'slide1.jpg',
+          tags: ''
         },
       ],
       slidesMobile: [
         {
           id: Math.random(),
           name: 'slide1_mob.jpg',
+          tags: ''
         },
         {
           id: Math.random(),
           name: 'slide1_mob.jpg',
+          tags: ''
         },
         {
           id: Math.random(),
           name: 'slide1_mob.jpg',
+          tags: ''
         },
         {
           id: Math.random(),
           name: 'slide1_mob.jpg',
+          tags: ''
         },
         {
           id: Math.random(),
           name: 'slide1_mob.jpg',
+          tags: ''
         },
       ],
     }

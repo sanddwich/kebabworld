@@ -222,7 +222,7 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
                       </Link>
                     </Col>
                   </Row>
-                  <Row>
+                  {/* <Row>
                     <Col className="toggleMenu__listItemCont">
                       <div className="toggleMenu__listItem">
                         <div className="listElement"></div>
@@ -243,7 +243,7 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
                         <div className="toggleMenu__listItemTitle">Соусы</div>
                       </Link>
                     </Col>
-                  </Row>
+                  </Row> */}
                 </Container>
               )
             }

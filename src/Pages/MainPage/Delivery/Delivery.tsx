@@ -41,7 +41,7 @@ class Delivery extends React.Component<DeliveryProps, DeliveryState> {
             </div>
           </div>
           <div className="col-lg-5">
-            <img className="delivery__background image-fluid" src="img/fon/bg_car.png"></img>
+            <img className="delivery__background image-fluid" style={{zIndex:10}} src="img/fon/bg_car.png"></img>
           </div>
         </div>
 

@@ -5,7 +5,7 @@ import Variant from './Variant'
 export default interface Product {
   facets?: Facet[]
   id: number
-  image?: string
+  image: string
   ingredients?: string
   isDeleted?: boolean
   modifiers?: Modifier[]

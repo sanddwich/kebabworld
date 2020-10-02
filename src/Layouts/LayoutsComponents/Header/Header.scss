@@ -140,3 +140,17 @@
     padding-left: 0px !important;
   }
 }
+
+#ToTopArrow {
+  position: fixed;
+  bottom: 30px; right: 30px;
+  opacity: 0.3;
+  cursor: pointer;
+  display: none;  
+  color: #ff2c33;
+  z-index: 1000;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

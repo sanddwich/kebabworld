@@ -4,6 +4,8 @@ import MobileHeader from '../MobileHeader/MobileHeader'
 import { Link } from 'react-scroll'
 import './Header.scss'
 import { displayCategory } from '../../../Utils/utils'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons'
 
 interface HeaderProps {}
 
@@ -21,6 +23,17 @@ class Header extends React.Component<HeaderProps, HeaderState> {
         element.classList.add('active')
       })
     })
+
+    document.addEventListener('scroll', () => {
+      const elem = document.querySelector('#ToTopArrow') as HTMLElement
+      if (window.pageYOffset > 300) {
+        elem.style.display = 'block'
+      } else {
+        elem.style.display = 'none'
+      }
+    })
+
+    displayCategory('kebab')
   }
 
   removeActiveClass = (): void => {
@@ -32,6 +45,20 @@ class Header extends React.Component<HeaderProps, HeaderState> {
   render() {
     return (
       <Container fluid className="Header">
+        <Link
+          activeClass="active"
+          to="siteBegin"
+          spy={true}
+          smooth={true}
+          offset={-250}
+          delay={50}
+          duration={500}
+        >
+          <div id="ToTopArrow">
+            <FontAwesomeIcon icon={faArrowAltCircleUp} size="4x" />
+          </div>
+        </Link>
+
         <Container className="Header__pcmenu p-0 d-none d-md-block">
           <Row className="Header__up p-0 m-0 d-flex justify-content-between align-items-center">
             <Col md={3} className="p-0 m-0">
@@ -232,7 +259,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                   <div>Напитки</div>
                 </Link>
               </div>
-              <div className="p-0 m-0 Header__navlink">
+              {/* <div className="p-0 m-0 Header__navlink">
                 <Link
                   onClick={() => displayCategory('kebab')}
                   activeClass="active"
@@ -245,7 +272,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                 >
                   <div>Соусы</div>
                 </Link>
-              </div>
+              </div> */}
             </Col>
           </Row>
         </Container>
