@@ -2,7 +2,7 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import './HeaderSlider.scss'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Navigation, Pagination } from 'swiper'
+import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper'
 
 // Import Swiper styles
 import 'swiper/swiper.scss'
@@ -13,7 +13,7 @@ import 'swiper/components/pagination/pagination.scss'
 import Slide from '../../../Interfaces/Slide'
 
 // install Swiper components
-SwiperCore.use([Navigation, Pagination])
+SwiperCore.use([Navigation, Pagination, Autoplay])
 
 interface HeaderSliderProps {}
 
@@ -29,54 +29,34 @@ class HeaderSlider extends React.Component<HeaderSliderProps, HeaderSliderState>
       slides: [
         {
           id: Math.random(),
-          name: 'slide1.jpg',
+          name: 'баран.png',
           tags: ''
         },
         {
           id: Math.random(),
-          name: 'slide1.jpg',
+          name: 'кура.png',
           tags: ''
         },
         {
           id: Math.random(),
-          name: 'slide1.jpg',
-          tags: ''
-        },
-        {
-          id: Math.random(),
-          name: 'slide1.jpg',
-          tags: ''
-        },
-        {
-          id: Math.random(),
-          name: 'slide1.jpg',
+          name: 'свинья.png',
           tags: ''
         },
       ],
       slidesMobile: [
         {
           id: Math.random(),
-          name: 'slide1_mob.jpg',
+          name: 'баран.png',
           tags: ''
         },
         {
           id: Math.random(),
-          name: 'slide1_mob.jpg',
+          name: 'кура.png',
           tags: ''
         },
         {
           id: Math.random(),
-          name: 'slide1_mob.jpg',
-          tags: ''
-        },
-        {
-          id: Math.random(),
-          name: 'slide1_mob.jpg',
-          tags: ''
-        },
-        {
-          id: Math.random(),
-          name: 'slide1_mob.jpg',
+          name: 'свинья.png',
           tags: ''
         },
       ],
@@ -89,6 +69,7 @@ class HeaderSlider extends React.Component<HeaderSliderProps, HeaderSliderState>
         <Container fluid className="HeaderSlider d-none d-sm-block p-0">
           <Swiper
             loop={true}
+            autoplay={{delay:5000}}
             navigation={{
               nextEl: '#nextSlideFull',
               prevEl: '#prevSlideFull',
@@ -132,12 +113,13 @@ class HeaderSlider extends React.Component<HeaderSliderProps, HeaderSliderState>
               nextEl: '#nextSlideMob',
               prevEl: '#prevSlideMob',
             }}
+            autoplay={{delay:5000}}
             pagination={{ clickable: true, el: '#paginationMob' }}
           >
             {this.state.slidesMobile.map((slide, index) => {
               return (
                 <SwiperSlide key={slide.id} virtualIndex={index}>
-                  <img className="image-fluid" src={`img/slider/${slide.name}`} alt="" width="100%" />
+                  <img className="image-fluid" src={`img/slider/mob/${slide.name}`} alt="" width="100%" />
                 </SwiperSlide>
               )
             })}
