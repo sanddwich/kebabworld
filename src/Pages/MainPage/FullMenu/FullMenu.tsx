@@ -1057,7 +1057,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
   showImgDialog = (image: string): void => {
     let modalImg = ''
     image === '' ? (modalImg = 'img/products/no-photo.png') : (modalImg = `img/products/${image}`)
-    this.setState({ modal: true, modalImg})
+    this.setState({ modal: true, modalImg })
   }
 
   closeImgDialog = (): void => {
@@ -1067,8 +1067,9 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
   renderModal = (): any => {
     return (
       <Modal id="modalCont" show={this.state.modal} onHide={() => this.closeImgDialog()} animation={false}>
+        <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
-          <img className="img-fluid" src={this.state.modalImg} alt="" width="100%"/>
+          <img className="img-fluid" src={this.state.modalImg} alt="" width="100%" />
         </Modal.Body>
       </Modal>
     )
