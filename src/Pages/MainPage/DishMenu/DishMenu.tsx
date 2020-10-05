@@ -111,7 +111,7 @@ export default class DishMenu extends React.Component<DishMenuProps, DishMenuSta
                     offset={-250}
                     duration={500}
                   >
-                    <img src="img/dish/first.png" alt="" />
+                    <img src="img/dish/first.png" alt="" width="100%" />
 
                     <div className="DishMenu__litlecatTitle">Первые блюда</div>
                   </Link>
@@ -129,7 +129,7 @@ export default class DishMenu extends React.Component<DishMenuProps, DishMenuSta
                     offset={-250}
                     duration={500}
                   >
-                    <img style={{ marginBottom: -25 }} src="img/dish/second.png" alt="" />
+                    <img  src="img/dish/second.png" alt="" width="100%" />
 
                     <div className="DishMenu__litlecatTitle">Вторые блюда</div>
                   </Link>
@@ -147,7 +147,7 @@ export default class DishMenu extends React.Component<DishMenuProps, DishMenuSta
                     offset={-250}
                     duration={500}
                   >
-                    <img src="img/dish/garnirs.png" alt="" />
+                    <img src="img/dish/garnirs.png" alt="" width="100%" />
 
                     <div className="DishMenu__litlecatTitle">Гарниры</div>
                   </Link>
@@ -168,7 +168,7 @@ export default class DishMenu extends React.Component<DishMenuProps, DishMenuSta
                     offset={-250}
                     duration={500}
                   >
-                    <img src="img/dish/salats.png" alt="" />
+                    <img style={{marginBottom:-20}} src="img/dish/salats.png" alt="" width="100%" />
 
                     <div className="DishMenu__litlecatTitle">Салаты</div>
                   </Link>
@@ -186,7 +186,7 @@ export default class DishMenu extends React.Component<DishMenuProps, DishMenuSta
                     offset={-250}
                     duration={500}
                   >
-                    <img src="img/dish/zakuson.png" alt="" />
+                    <img  style={{marginBottom:-20}} src="img/dish/zakuson.png" alt="" width="100%" />
 
                     <div className="DishMenu__litlecatTitle">Закуски</div>
                   </Link>
@@ -204,7 +204,7 @@ export default class DishMenu extends React.Component<DishMenuProps, DishMenuSta
                     offset={-250}
                     duration={500}
                   >
-                    <img src="img/dish/drink.png" alt="" />
+                    <img style={{marginBottom:-20}} src="img/dish/drink.png" alt="" width="100%" />
 
                     <div className="DishMenu__litlecatTitle">Напитки</div>
                   </Link>

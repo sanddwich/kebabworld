@@ -19,4 +19,18 @@ export function displayCategory(category: string) {
       cat.style.display = 'block'
     }
   })
+
+  // const screenWidth = document.documentElement.clientWidth
+
+  // if (screenWidth <= 768) {
+  //   setTimeout(() => {
+  //     const posY = window.pageYOffset
+  //     const posX = window.pageXOffset
+  //     window.scrollTo({
+  //       left: 0, 
+  //       top: posY - 400,
+  //       behavior: 'smooth'
+  //     })
+  //   }, 600)
+  // }
 }

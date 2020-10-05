@@ -83,7 +83,7 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
                           this.closeOpenMenu()
                         }}
                         delay={50}
-                        offset={370}
+                        offset={200}
                         duration={500}
                       >
                         <div className="toggleMenu__listItemTitle">Блюда на мангале</div>
@@ -105,7 +105,7 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
                           this.closeOpenMenu()
                         }}
                         delay={50}
-                        offset={370}
+                        offset={200}
                         duration={500}
                       >
                         <div className="toggleMenu__listItemTitle">Первые блюда</div>
@@ -127,7 +127,7 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
                           this.closeOpenMenu()
                         }}
                         delay={50}
-                        offset={370}
+                        offset={200}
                         duration={500}
                       >
                         <div className="toggleMenu__listItemTitle">Вторые блюда</div>
@@ -149,7 +149,7 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
                           this.closeOpenMenu()
                         }}
                         delay={50}
-                        offset={370}
+                        offset={200}
                         duration={500}
                       >
                         <div className="toggleMenu__listItemTitle">Салаты</div>
@@ -171,7 +171,7 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
                           this.closeOpenMenu()
                         }}
                         delay={50}
-                        offset={370}
+                        offset={200}
                         duration={500}
                       >
                         <div className="toggleMenu__listItemTitle">Гарниры</div>
@@ -193,7 +193,7 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
                           this.closeOpenMenu()
                         }}
                         delay={50}
-                        offset={370}
+                        offset={200}
                         duration={500}
                       >
                         <div className="toggleMenu__listItemTitle">Закуски</div>
@@ -215,7 +215,7 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
                           this.closeOpenMenu()
                         }}
                         delay={50}
-                        offset={370}
+                        offset={200}
                         duration={500}
                       >
                         <div className="toggleMenu__listItemTitle">Напитки</div>

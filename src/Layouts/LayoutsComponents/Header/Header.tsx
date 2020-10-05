@@ -95,7 +95,11 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                 <Col xs={7} className="p-0 m-0 d-flex align-items-center justify-content-start">
                   <div>
                     <Link
-                      onClick={() => displayCategory('kebab')}
+                      onClick={() => {
+                        displayCategory('kebab')
+                        this.removeActiveClass()
+                        document.querySelector('.Header__navlink')?.classList.add('active')
+                      }}
                       activeClass="active"
                       to="kebab"
                       spy={true}
