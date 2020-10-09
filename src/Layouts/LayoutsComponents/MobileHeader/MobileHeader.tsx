@@ -97,18 +97,18 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
                       </div>
                       <Link
                         activeClass="active"
-                        to="firstdish"
+                        to="banket"
                         spy={true}
                         smooth={true}
                         onClick={() => {
-                          displayCategory('firstdish')
+                          displayCategory('banket')
                           this.closeOpenMenu()
                         }}
                         delay={50}
                         offset={200}
                         duration={500}
                       >
-                        <div className="toggleMenu__listItemTitle">Первые блюда</div>
+                        <div className="toggleMenu__listItemTitle">Банкетное меню</div>
                       </Link>
                     </Col>
                   </Row>

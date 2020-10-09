@@ -22,7 +22,7 @@ class Delivery extends React.Component<DeliveryProps, DeliveryState> {
             <div className="row">
               <div className="col-lg-6 delivery__action">
                 <div className="delivery__cirlcle">1</div>
-                <div className="delivery__action__text">Сделайте выбор товара</div>
+                <div className="delivery__action__text">Сделайте выбор блюда</div>
               </div>
               <div className="col-lg-6 delivery__action">
                 <div className="delivery__cirlcle">2</div>
@@ -41,7 +41,7 @@ class Delivery extends React.Component<DeliveryProps, DeliveryState> {
             </div>
           </div>
           <div className="col-lg-5">
-            <img className="delivery__background image-fluid" style={{zIndex:10}} src="img/fon/bg_car.png"></img>
+            <img className="delivery__background image-fluid" style={{ zIndex: 10 }} src="img/fon/bg_car.png"></img>
           </div>
         </div>
 
@@ -50,16 +50,31 @@ class Delivery extends React.Component<DeliveryProps, DeliveryState> {
             <h3 className="delivery__title">Или вы всегда можете придти к нам</h3>
           </div>
         </div>
-        <div className="row m-0 p-0">
-          <div className="col-lg-4 m-0 mt-4 mb-4 p-0">
-            <img className="mr-4" src="img/smily-face.png" />
-            Вкусно поесть
+        <div className="row m-0 p-0 d-flex justify-content-between">
+          <div className="delivery__descr col-lg-4 m-0 mt-4 mb-4 p-0">
+            <div className="delivery__descr row">
+              <div className="delivery__descrimg col-xs-2">
+                <img className="mr-4" src="img/smily-face.png" />
+              </div>
+              <div className="delivery__descrtitle col-xs-10">Вкусно поесть</div>
+            </div>
+          </div>
+          <div className="delivery__descr col-lg-4  m-0  mt-4 mb-4 p-0 ">
+            <div className="delivery__descr row">
+              <div className="delivery__descrimg col-xs-2">
+                <img className="mr-4" src="img/stars.png" />
+              </div>
+              <div className="delivery__descrtitle col-xs-10">Отдохнуть в приятной обстановке</div>
+            </div>
           </div>
           <div className="col-lg-4  m-0  mt-4 mb-4 p-0 ">
-            <img className="mr-4" src="img/stars.png" />
-            Отдохнуть в приятной обстановке
+            <div className="delivery__descr row">
+              <div className="delivery__descrimg col-xs-2">
+                <img className="mr-4" src="img/music.svg" style={{marginTop:-5}} />
+              </div>
+              <div className="delivery__descrtitle col-xs-10">Музыкальное сопровождение до 23:00</div>
+            </div>
           </div>
-          <div className="col-lg-4 m-0 p-0"></div>
         </div>
 
         <div className="row m-0 p-0 delivery__address ">
@@ -73,8 +88,7 @@ class Delivery extends React.Component<DeliveryProps, DeliveryState> {
           <div className="col-sm-8 m-0 p-0 ">
             <div className="delivery__address__title pt-4 pb-4">Зона доставки</div>
             <div>
-              <img className="mr-3" src="img/map.png" /> мкр-он Бабаевского, поселок Свободный, поселок Янго-Аул,
-              Астрахань-2
+              <img className="mr-3" src="img/map.png" /> мкр-он Бабаевского, Астрахань-2
             </div>
           </div>
         </div>

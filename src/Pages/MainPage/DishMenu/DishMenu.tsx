@@ -37,9 +37,9 @@ export default class DishMenu extends React.Component<DishMenuProps, DishMenuSta
         },
         {
           id: Math.random(),
-          name: 'first.png',
-          tags: 'firstdish',
-          title: 'Первые блюда',
+          name: 'kebab.png',
+          tags: 'banket',
+          title: 'Банкетное меню',
         },
         {
           id: Math.random(),
@@ -102,9 +102,9 @@ export default class DishMenu extends React.Component<DishMenuProps, DishMenuSta
               <Col md={4} className="DishMenu__litlecat p-0 d-flex justify-content-center align-items-end">
                 <div style={{ marginTop: -100, cursor: 'pointer' }}>
                   <Link
-                    onClick={() => displayCategory('firstdish')}
+                    onClick={() => displayCategory('banket')}
                     activeClass="active"
-                    to="firstdish"
+                    to="banket"
                     spy={true}
                     smooth={true}
                     delay={50}
@@ -113,7 +113,7 @@ export default class DishMenu extends React.Component<DishMenuProps, DishMenuSta
                   >
                     <img src="img/dish/first.png" alt="" width="100%" />
 
-                    <div className="DishMenu__litlecatTitle">Первые блюда</div>
+                    <div className="DishMenu__litlecatTitle">Банкетное меню</div>
                   </Link>
                 </div>
               </Col>

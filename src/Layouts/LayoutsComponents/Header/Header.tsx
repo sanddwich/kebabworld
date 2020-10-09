@@ -181,16 +181,16 @@ class Header extends React.Component<HeaderProps, HeaderState> {
               </div>
               <div className="p-0 m-0 Header__navlink">
                 <Link
-                  onClick={() => displayCategory('firstdish')}
+                  onClick={() => displayCategory('banket')}
                   activeClass="active"
-                  to="firstdish"
+                  to="banket"
                   spy={true}
                   smooth={true}
                   delay={50}
                   offset={-250}
                   duration={500}
                 >
-                  <div>Первые блюда</div>
+                  <div>Банкетное меню</div>
                 </Link>
               </div>
               <div className="p-0 m-0 Header__navlink">

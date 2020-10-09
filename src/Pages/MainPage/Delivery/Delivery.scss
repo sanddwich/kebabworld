@@ -49,6 +49,22 @@
     margin-right: 10px;
   }
 
+  &__descr {
+    // display: inline-block;
+
+    .delivery__descrimg {
+      width: 15%;
+    }
+
+    .delivery__descrtitle {
+      width: 85%;
+      padding-right: 20px;
+
+      display: flex;
+      align-items: center;
+    }
+  }
+
   p {
     font-size: 20px;
     line-height: 23px;
