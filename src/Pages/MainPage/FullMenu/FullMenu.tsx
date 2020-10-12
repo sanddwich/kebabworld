@@ -32,7 +32,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               image: 'свинина.png',
             },{
               id: Math.random(),
-              name: 'из свинины - спинной отдел',
+              name: 'из свинины - спинная вырезка',
               price: 80.0,
               weight: '1/100',
               ingredients: '',
@@ -757,7 +757,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Лепешка',
               price: 50.0,
               weight: '1шт',
-              ingredients: '',
+              ingredients: 'Тандырная узбекская, и армянский матнакаш',
               image: 'Лепешка.png',
             },
             {
@@ -814,7 +814,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Соки натуральные',
               price: 135.0,
               weight: '1л',
-              ingredients: 'Томат, яблоко, персик, вишня, апельсин, мультифрукт, ананас',
+              ingredients: 'Яблоко, апельсин, мультифрукт, вишня, томат',
               image: 'drink.png',
             },
             {
@@ -830,7 +830,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Лимонад (Сан-Славия)',
               price: 80.0,
               weight: '0,5л',
-              ingredients: '',
+              ingredients: 'Груша, апельсин, мохито, тархун',
               image: 'сан славия.png',
             },
             {
@@ -873,14 +873,14 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               ingredients: '',
               image: 'кола 0,5.png',
             },
-            {
-              id: Math.random(),
-              name: 'Coca-Cola Energy',
-              price: 120.0,
-              weight: '0.5л',
-              ingredients: '',
-              image: 'cola energy.png',
-            },
+            // {
+            //   id: Math.random(),
+            //   name: 'Coca-Cola Energy',
+            //   price: 120.0,
+            //   weight: '0.5л',
+            //   ingredients: '',
+            //   image: 'cola energy.png',
+            // },
             {
               id: Math.random(),
               name: 'Энергетик Drive',
@@ -1115,11 +1115,11 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             },
             {
               id: Math.random(),
-              name: 'Рабное ассорти',
+              name: 'Рыбное ассорти',
               price: 0,
               weight: '',
-              ingredients: 'Индейка, ветчина, колбаса сырокопченая, рулет куриный, буженина',
-              image: '',
+              ingredients: 'Семга, балык из сома, масляная рыба',
+              image: 'рыбная нарезка.png',
             },
             {
               id: Math.random(),
@@ -1134,7 +1134,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Брынза с зеленью',
               price: 0,
               weight: '',
-              ingredients: '',
+              ingredients: 'Сыр брынза , укроп, петрушка , кинза',
               image: 'брынза.png',
             },
             {

@@ -272,17 +272,19 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
             </div>
           </Col>
         </Row>
-        <Row className="pb-5">
-          <Col className="p-0 m-0 pl-4 d-flex align-items-center justify-content-start menu__item">
-            <div className="toggleMenu__menuicon">
-              <img src="img/menu/phone.svg" alt="" width="17px" />
-            </div>
-            <div>
-              <div className="toggleMenu__title">777-999</div>
-              <div className="toggleMenu__title2">Работаем с 11:00 до 00:00</div>
-            </div>
-          </Col>
-        </Row>
+        <a href="tel:88512777999">
+          <Row className="pb-5">
+            <Col className="p-0 m-0 pl-4 d-flex align-items-center justify-content-start menu__item">
+              <div className="toggleMenu__menuicon">
+                <img src="img/menu/phone.svg" alt="" width="17px" />
+              </div>
+              <div>
+                <div className="toggleMenu__title">777-999</div>
+                <div className="toggleMenu__title2">Работаем с 11:00 до 00:00</div>
+              </div>
+            </Col>
+          </Row>
+        </a>
         <Row className="pb-5">
           <Col className="p-0 m-0 pl-4 d-flex align-items-center justify-content-start menu__item">
             <div className="toggleMenu__menuicon">

@@ -37,7 +37,7 @@ export default class DishMenu extends React.Component<DishMenuProps, DishMenuSta
         },
         {
           id: Math.random(),
-          name: 'kebab.png',
+          name: 'banket.png',
           tags: 'banket',
           title: 'Банкетное меню',
         },
@@ -111,7 +111,7 @@ export default class DishMenu extends React.Component<DishMenuProps, DishMenuSta
                     offset={-250}
                     duration={500}
                   >
-                    <img src="img/dish/first.png" alt="" width="100%" />
+                    <img src="img/dish/banket.png" alt="" width="100%" />
 
                     <div className="DishMenu__litlecatTitle">Банкетное меню</div>
                   </Link>
