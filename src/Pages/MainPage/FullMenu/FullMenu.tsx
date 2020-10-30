@@ -569,6 +569,22 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             },
             {
               id: Math.random(),
+              name: 'Тарелка с наггетсами и картофелем фри',
+              price: 230.0,
+              weight: '1/300',
+              ingredients: 'Наггетсы - 150гр. Картофель фри - 150гр.',
+              image: 'наггетсы.png',
+            },
+            {
+              id: Math.random(),
+              name: 'Тарелка с крылышками и картофелем фри',
+              price: 270.0,
+              weight: '1/300',
+              ingredients: 'Куриные крылышки - 150гр. Картофель фри - 150гр.',
+              image: 'крылья.png',
+            },
+            {
+              id: Math.random(),
               name: 'Брокколи, жареные в сливочном соусе',
               price: 120.0,
               weight: '1/200',
