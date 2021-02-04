@@ -5,7 +5,8 @@ import rootReducer from './reducers'
 
 const persistedState = undefined
 
-const store = createStore(rootReducer, persistedState, composeWithDevTools(applyMiddleware(thunk)))
+// const store = createStore(rootReducer, persistedState, composeWithDevTools(applyMiddleware(thunk)))
+const store = createStore(rootReducer, persistedState, applyMiddleware(thunk))
 
 export type RootState = ReturnType<typeof rootReducer>
 

@@ -77,21 +77,22 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               ingredients: '',
               image: 'куркрылья.png',
             },
-            // {
-            //   id: Math.random(),
-            //   name: 'из куриных ножек',
-            //   price: 80.0,
-            //   weight: '1/100',
-            //   ingredients: '',
-            //   image: '',
-            // },
-            // {
-            //   id: Math.random(),
-            //   name: 'из индейки',
-            //   price: 110.0,
-            //   weight: '1/100',
-            //   ingredients: '',
-            // },
+            {
+              id: Math.random(),
+              name: 'из сёмги',
+              price: 190.0,
+              weight: '1/100',
+              ingredients: '',
+              image: 'шашлык из семги.png',
+            },
+            {
+              id: Math.random(),
+              name: 'из креветок',
+              price: 190.0,
+              weight: '1/100',
+              ingredients: '',
+              image: 'креветки.png',
+            },
             // {
             //   id: Math.random(),
             //   name: 'из рыбы (сазан, сом, судак)',
@@ -121,6 +122,14 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               weight: '1/100',
               ingredients: '',
               image: 'соус белый.png',
+            },
+            {
+              id: Math.random(),
+              name: 'Соус Чили',
+              price: 60.0,
+              weight: '1/100',
+              ingredients: '',
+              image: 'соус красный.png',
             },
           ],
         },
@@ -200,6 +209,14 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               ingredients: '',
               image: 'соус белый.png',
             },
+            {
+              id: Math.random(),
+              name: 'Соус Чили',
+              price: 60.0,
+              weight: '1/100',
+              ingredients: '',
+              image: 'соус красный.png',
+            },
           ],
         },
         {
@@ -249,6 +266,14 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               ingredients: '',
               image: 'соус белый.png',
             },
+            {
+              id: Math.random(),
+              name: 'Соус Чили',
+              price: 60.0,
+              weight: '1/100',
+              ingredients: '',
+              image: 'соус красный.png',
+            },
           ],
         },
         // {
@@ -294,18 +319,18 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
           products: [
             {
               id: Math.random(),
-              name: 'Макароны "по-флотски"',
-              price: 75.0,
+              name: 'Жульен из говяжьего языка',
+              price: 220.0,
               weight: '1/200',
-              ingredients: '',
-              image: 'макароны.png',
+              ingredients: 'Говяжий язык, грибы, лук, сыр, сметана',
+              image: 'жульен.png',
             },
             {
               id: Math.random(),
-              name: 'Жульен с курицей',
+              name: 'Жульен с курицей и грибами',
               price: 220.0,
               weight: '1/200',
-              ingredients: 'Куриное филе, грибы, лук, сыр',
+              ingredients: 'Куриное филе, грибы, лук, сыр, сметана',
               image: 'жульен.png',
             },
             {
@@ -313,7 +338,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Говядина в горшочке',
               price: 230.0,
               weight: '1/300',
-              ingredients: 'Мясо, картошка, бульон, зелень, грибы',
+              ingredients: 'Мясо, картошка, бульон, зелень, грибы, болгарский перец, лук',
               image: 'горшок.png',
             },
             {
@@ -321,7 +346,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Свинина в горшочке',
               price: 220.0,
               weight: '1/300',
-              ingredients: 'Мясо, картошка, бульон, зелень, грибы',
+              ingredients: 'Мясо, картошка, бульон, зелень, грибы, болгарский перец, лук',
               image: 'горшок.png',
             },
             {
@@ -329,7 +354,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Баранина в горшочке',
               price: 240.0,
               weight: '1/300',
-              ingredients: 'Мясо, картошка, бульон, зелень, грибы',
+              ingredients: 'Мясо, картошка, бульон, зелень, грибы, болгарский перец, лук',
               image: 'горшок.png',
             },            
             {
@@ -337,25 +362,25 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Курица в горшочке',
               price: 220.0,
               weight: '1/300',
-              ingredients: 'Курица, картошка, бульон, зелень, грибы',
+              ingredients: 'Курица, картошка, бульон, зелень, грибы, болгарский перец, лук',
               image: 'горшок.png',
             },
-            {
-              id: Math.random(),
-              name: 'Котлеты из говядины',
-              price: 70.0,
-              weight: '1/100',
-              ingredients: '',
-              image: 'котлеты.png',
-            },
-            {
-              id: Math.random(),
-              name: 'Гуляш из говядины',
-              price: 65.0,
-              weight: '1/100',
-              ingredients: '',
-              image: 'гуляш.png',
-            },
+            // {
+            //   id: Math.random(),
+            //   name: 'Котлеты из говядины',
+            //   price: 70.0,
+            //   weight: '1/100',
+            //   ingredients: '',
+            //   image: 'котлеты.png',
+            // },
+            // {
+            //   id: Math.random(),
+            //   name: 'Гуляш из говядины',
+            //   price: 65.0,
+            //   weight: '1/100',
+            //   ingredients: '',
+            //   image: 'гуляш.png',
+            // },
             {
               id: Math.random(),
               name: 'Жаркое по домашнему (из говядины)',
@@ -420,6 +445,14 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               ingredients: '',
               image: 'соус белый.png',
             },
+            {
+              id: Math.random(),
+              name: 'Соус Чили',
+              price: 60.0,
+              weight: '1/100',
+              ingredients: '',
+              image: 'соус красный.png',
+            },
           ],
         },
         {
@@ -434,7 +467,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Шашлычный мир',
               price: 250.0,
               weight: '1/200',
-              ingredients: 'Говядина отварная, чернослив, сыр, грецкий орех, гранат, майонез, зелень',
+              ingredients: 'Говядина отварная, чернослив, огурец, сыр, грецкий орех, гранат, майонез, зелень',
               image: 'шашл мир.png',
             },
             {
@@ -443,7 +476,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 200.0,
               weight: '1/200',
               ingredients:
-                'Лист салата, помидоры, огурцы, перец болгарский, оливки, маслины, сыр Фетакса, соус, оливковое масло, лук',
+                'Лист салата, помидоры, огурцы, перец болгарский, оливки, маслины, сыр Фетакса, соус, кунжут, лук',
               image: 'греческий.png',
             },
             {
@@ -451,7 +484,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Южный',
               price: 160.0,
               weight: '1/200',
-              ingredients: 'Помидоры, огурцы, лук, зелень, майонез, сметана, масло',
+              ingredients: 'Помидоры, огурцы, лук, зелень, сметана, майонез или подсолнечное масло',
               image: 'южный.png',
             },
             // {
@@ -473,7 +506,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Цезарь из курицы',
               price: 200.0,
               weight: '1/200',
-              ingredients: 'Курица, сухари, лист салата, черри, грецкий орех, сыр, соус',
+              ingredients: 'Курица, сухари, лист салата, черри, перепелиные яйца, сыр, соус',
               image: 'цезарьизкурицы.png',
             },
             {
@@ -481,7 +514,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Цезарь с семгой',
               price: 250.0,
               weight: '1/200',
-              ingredients: 'Семга, сухари, лист салата, черри, грецкий орех, сыр, соус',
+              ingredients: 'Семга, сухари, лист салата, черри, перепелиные яйца, сыр, соус',
               image: 'цезарьсемга.png',
             },
             {
@@ -489,24 +522,24 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Цезарь с креветками',
               price: 220.0,
               weight: '1/200',
-              ingredients: 'Креветки королевские, сухари, лист салата, черри, сыр, соус',
+              ingredients: 'Креветки королевские, сухари, лист салата, черри, перепелиные яйца, сыр, соус',
               image: 'цезарьскреветками.png',
             },
-            {
-              id: Math.random(),
-              name: 'Черные глаза',
-              price: 200.0,
-              weight: '1/200',
-              ingredients: 'Говядина отварная, чернослив, сыр, грецкий орех, гранат, майонез',
-              image: 'черныеглаза.png',
-            },
+            // {
+            //   id: Math.random(),
+            //   name: 'Черные глаза',
+            //   price: 200.0,
+            //   weight: '1/200',
+            //   ingredients: 'Говядина отварная, чернослив, сыр, грецкий орех, гранат, майонез',
+            //   image: 'черныеглаза.png',
+            // },
             {
               id: Math.random(),
               name: 'Дамский каприз',
               price: 200.0,
               weight: '1/220',
               ingredients:
-                'Куриная грудка, жареные шампиньоны, консервированный ананас, сладкий перец, варенное яйцо, майонез, перец',
+                'Куриная грудка, жареные шампиньоны, консервированный ананас, варенное яйцо, майонез, болгарский перец',
               image: 'дамскийкаприз.png',
             },
             {
@@ -514,7 +547,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Принцесса',
               price: 200.0,
               weight: '1/200',
-              ingredients: 'Капуста пекинская, огурцы, креветки очищенные, клюква, соус, оливковое масло',
+              ingredients: 'Капуста пекинская, огурцы, креветки очищенные, клюква, соус',
               image: 'принцесса.png',
             },
             {
@@ -522,7 +555,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Фаворит',
               price: 180.0,
               weight: '1/200',
-              ingredients: 'Курица отварная, огурцы, сыр, майонез, яйцо куриное, украшается перепелиными яйцами',
+              ingredients: 'Куриная грудка, огурцы, сыр, майонез, яйцо куриное, украшается черри',
               image: 'фаворит.png',
             },
             {
@@ -531,8 +564,62 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 180.0,
               weight: '1/200',
               ingredients:
-                'Ветчина из индейки, сыр, перец болгарский, помидоры, оливки, маслины, соус, оливковое масло',
+                'Ветчина из индейки, сыр, перец болгарский, помидоры, оливки, маслины, оливковое масло',
               image: 'пестрый.png',
+            },
+            {
+              id: Math.random(),
+              name: 'Любимый',
+              price: 250.0,
+              weight: '1/200',
+              ingredients:
+                'Куриная грудка, жареные шампиньоны, огурец, яйцо, сыр, майонез, зеленый лук',
+              image: 'салат из копченой курицы с овощами.png',
+            },
+            {
+              id: Math.random(),
+              name: 'Теплый',
+              price: 300.0,
+              weight: '1/250',
+              ingredients:
+                'Говядина, перец болгарский, баклажан, соус, кунжут, лук',
+              image: 'салат из говяжьего языка с овощами.png',
+            },
+            {
+              id: Math.random(),
+              name: 'Салат из говяжьего языка с овощами',
+              price: 230.0,
+              weight: '1/200',
+              ingredients:
+                'Говяжий язык, огурец, помидоры, лист салата, красный лук, жареные грибы, майонез, украшается яйцом',
+              image: 'салат из говяжьего языка с овощами.png',
+            },            
+            {
+              id: Math.random(),
+              name: 'Салат  из  с/с  лосося  с  овощами',
+              price: 290.0,
+              weight: '1/200',
+              ingredients:
+                'Пекинская капуста, перец болгарский, красный лук, черри, огурец, с/с лосось, соевый соус, оливковое масло, кунжут',
+              image: 'салат из с.с. лосося с овощами.png',
+            },            
+            {
+              id: Math.random(),
+              name: 'Салат  из  копченой  курицы  с  овощами',
+              price: 230.0,
+              weight: '1/200',
+              ingredients:
+                'Копченая курица, помидоры. огурец, болгарский перец, лук красный, лист салата, майонез, украшается яйцом',
+              image: 'салат из копченой курицы с овощами.png',
+            },            
+            {
+              id: Math.random(),
+              name: 'Восхитительный  микс',
+              price: 310.0,
+              weight: '1/200',
+              ingredients:
+                'Лист салата, филе с/с семги, сыр фета, черри, маслины, сок лимона, оливковое масло, кунжут',
+              image: 'восхитительный микс.png',
             },
           ],
         },
@@ -623,6 +710,14 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               ingredients: '',
               image: 'соус белый.png',
             },
+            {
+              id: Math.random(),
+              name: 'Соус Чили',
+              price: 60.0,
+              weight: '1/100',
+              ingredients: '',
+              image: 'соус красный.png',
+            },
           ],
         },
         {
@@ -637,7 +732,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Овощное ассорти',
               price: 200.0,
               weight: '1/200',
-              ingredients: 'Помидоры, огурцы, перец болгарский, зелень, маслины',
+              ingredients: 'Помидоры, огурцы, перец болгарский, зелень, оливки, маслины',
               image: 'ассорти.png',
             },
             {
@@ -645,7 +740,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Брынза с зеленью',
               price: 200.0,
               weight: '1/170',
-              ingredients: '',
+              ingredients: 'Сыр брынза, укроп, петрушка, кинза, зеленый лук',
               image: 'брынза.png',
             },
             {
@@ -653,7 +748,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Помидоры пикантные',
               price: 160.0,
               weight: '1/250',
-              ingredients: 'Помидоры, соус, сыр, оливки, зелень',
+              ingredients: 'Помидоры, соус, сыр, оливки, маслины, зелень',
               image: 'помидоры.png',
             },
             {
@@ -661,7 +756,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Мясная нарезка',
               price: 270.0,
               weight: '1/350',
-              ingredients: 'Индейка, ветчина, колбаса сырокопченая, рулет куриный, буженина',
+              ingredients: 'Колбаса Салями, куриная грудка, говяжий язык, куриный рулет, горчица',
               image: 'мясная.png',
             },
             {
@@ -669,7 +764,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Сырная нарезка',
               price: 250.0,
               weight: '1/220',
-              ingredients: 'Мраморный, гауда, маасдам',
+              ingredients: 'Мраморный, гауда, маасдам, пармезан, виноград',
               image: 'сырная.png',
             },
             // {
@@ -699,9 +794,9 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             {
               id: Math.random(),
               name: 'Соленья "по-деревенски"',
-              price: 100.0,
+              price: 200.0,
               weight: '1/200',
-              ingredients: 'Огурцы соленые, перец острый, чеснок, черемша',
+              ingredients: 'Соленые огурцы, помидоры, чеснок, черемша, капуста, морковь, цветная капуста, острый перец, стручковая фасоль',
               image: 'соленья.png',
             },
             {
@@ -725,7 +820,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Фруктовое ассорти',
               price: 270.0,
               weight: '1/450',
-              ingredients: 'Яблоки, виноград, бананы, апельсины',
+              ingredients: 'Яблоко, виноград, банан, апельсин, киви',
               image: 'фрукт.png',
             },
             {
@@ -816,6 +911,14 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               ingredients: '',
               image: 'соус белый.png',
             },
+            {
+              id: Math.random(),
+              name: 'Соус Чили',
+              price: 60.0,
+              weight: '1/100',
+              ingredients: '',
+              image: 'соус красный.png',
+            },
           ],
         },
         {
@@ -835,7 +938,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             },
             {
               id: Math.random(),
-              name: 'Минеральная вода "Рыч Алсу"',
+              name: 'Минеральная вода "Рычал Су"',
               price: 75.0,
               weight: '0,5л',
               ingredients: '',
@@ -1211,7 +1314,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             },
             {
               id: Math.random(),
-              name: 'Соус красный и белый',
+              name: 'Соус красный, белый, чили',
               price: 0,
               weight: '',
               ingredients: '',
@@ -1316,7 +1419,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             },
             {
               id: Math.random(),
-              name: 'Соус красный и белый',
+              name: 'Соус красный и белый, чили',
               price: 0,
               weight: '',
               ingredients: '',
