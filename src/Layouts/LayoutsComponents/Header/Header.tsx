@@ -62,7 +62,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
         <Container className="Header__pcmenu p-0 d-none d-md-block">
           <Row className="Header__up p-0 m-0 d-flex justify-content-between align-items-center">
             <Col md={3} className="p-0 m-0">
-              <a href="tel:88512777999">
+              {/* <a href="tel:88512777999"> */}
                 <Row className="p-0 m-0">
                   <Col xs={3} className="p-0 m-0 pr-3 d-flex align-items-center justify-content-end">
                     <div className="FullMenuItem__menuicon">
@@ -71,8 +71,9 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                   </Col>
                   <Col xs={9} className="p-0 m-0 d-flex align-items-center justify-content-start">
                     <div>
-                      <div className="FullMenuItem__title">
+                      <div className="FullMenuItem__title d-flex justify-content-between">
                         <span itemProp="telephone">777-999</span>
+                        <span itemProp="telephone">77-30-77</span>
                       </div>
                       <div className="FullMenuItem__description">
                         <time itemProp="openingHours" dateTime="Mo, Tu, We, Th, Fr, Sa, Su 11:00-24:00">
@@ -82,7 +83,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                     </div>
                   </Col>
                 </Row>
-              </a>
+              {/* </a> */}
             </Col>
 
             <Col md={2} className="p-0 m-0">
@@ -150,6 +151,20 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                 </Col>
                 <Col xs={9} className="p-0 m-0 d-flex align-items-center justify-content-start">
                   <div itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
+                    <div className="FullMenuItem__description">
+                      <span itemProp="streetAddress">г.Астрахань</span>
+                    </div>
+                    <div className="FullMenuItem__description">
+                      <span itemProp="streetAddress">ул. Жилая 1</span>
+                    </div>
+                    <div className="FullMenuItem__description">
+                      <span itemProp="streetAddress">ул.Куликова 50в</span>
+                    </div>
+                    <meta itemProp="addressCountry" content="RU" />
+                  </div>
+                </Col>
+                {/* <Col xs={9} className="p-0 m-0 d-flex align-items-center justify-content-start">
+                  <div itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
                     <div className="FullMenuItem__title">
                       <span itemProp="addressLocality">г.Астрахань</span>
                     </div>
@@ -158,7 +173,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                     </div>
                     <meta itemProp="addressCountry" content="RU" />
                   </div>
-                </Col>
+                </Col> */}
               </Row>
             </Col>
           </Row>

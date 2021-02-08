@@ -280,12 +280,27 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
               </div>
               <div>
                 <div className="toggleMenu__title">777-999</div>
+                <div className="toggleMenu__title2">г. Астрахань, ул. Жилая 1</div>
                 <div className="toggleMenu__title2">Работаем с 11:00 до 00:00</div>
               </div>
             </Col>
           </Row>
         </a>
-        <Row className="pb-5">
+        <a href="tel:88512773077">
+          <Row className="pb-5">
+            <Col className="p-0 m-0 pl-4 d-flex align-items-center justify-content-start menu__item">
+              <div className="toggleMenu__menuicon">
+                <img src="img/menu/phone.svg" alt="" width="17px" />
+              </div>
+              <div>
+                <div className="toggleMenu__title">77-30-77</div>
+                <div className="toggleMenu__title2">г. Астрахань, ул.Куликова 50в</div>
+                <div className="toggleMenu__title2">Работаем с 11:00 до 00:00</div>
+              </div>
+            </Col>
+          </Row>
+        </a>
+        {/* <Row className="pb-5">
           <Col className="p-0 m-0 pl-4 d-flex align-items-center justify-content-start menu__item">
             <div className="toggleMenu__menuicon">
               <img src="img/menu/address.svg" alt="" width="17px" />
@@ -295,7 +310,7 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
               <div className="toggleMenu__title2">ул. Жилая 1</div>
             </div>
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     )
   }
