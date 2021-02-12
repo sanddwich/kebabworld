@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
 import './Delivery.scss'
 
 interface DeliveryProps {}
@@ -70,7 +70,7 @@ class Delivery extends React.Component<DeliveryProps, DeliveryState> {
           <div className="col-lg-4  m-0  mt-4 mb-4 p-0 ">
             <div className="delivery__descr row">
               <div className="delivery__descrimg col-xs-2">
-                <img className="mr-4" src="img/music.svg" style={{marginTop:-5}} />
+                <img className="mr-4" src="img/music.svg" style={{ marginTop: -5 }} />
               </div>
               <div className="delivery__descrtitle col-xs-10">Музыкальное сопровождение до 23:00</div>
             </div>
@@ -78,7 +78,7 @@ class Delivery extends React.Component<DeliveryProps, DeliveryState> {
         </div>
 
         <div className="row m-0 p-0 delivery__address ">
-          <div className="col-sm-4 m-0 p-0 ">
+          {/* <div className="col-sm-4 m-0 p-0 ">
             <div className="delivery__address__title pt-4 pb-4">Мы находимся</div>
             <div>
               <img className="mr-3" src="img/marker.png" />
@@ -90,7 +90,42 @@ class Delivery extends React.Component<DeliveryProps, DeliveryState> {
             <div>
               <img className="mr-3" src="img/map.png" /> мкр-он Бабаевского, Астрахань-2
             </div>
-          </div>
+          </div> */}
+          <Container fluid className="p-0">
+            <Row className="delivery__string m-0">
+              <Col className="delivery__address__title p-0">Мы находимся</Col>
+              <Col className="delivery__address__title p-0">Зона доставки</Col>
+            </Row>
+            <Row className="delivery__string m-0">
+              <Col className="p-0">
+                <div className="d-flex justify-content-start align-items-center">
+                  <img className="delivery__img" src="img/marker.png" />
+                  <span>мкр-он Бабаевского, ул. Жилая 1</span>
+                </div>
+              </Col>
+              <Col className="p-0">
+                <div className="d-flex justify-content-start align-items-center">
+                  <img className="delivery__img" src="img/map.png" />
+                  <span>мкр-он Бабаевского, Астрахань-2</span>
+                </div>
+              </Col>
+            </Row>
+
+            <Row className="delivery__string m-0">
+              <Col className="p-0">
+                <div className="d-flex justify-content-start align-items-center">
+                  <img className="delivery__img" src="img/marker.png" />
+                  <span>ул.Куликова 50в</span>
+                </div>
+              </Col>
+              <Col className="p-0">
+                <div className="d-flex justify-content-start align-items-center">
+                  <img className="delivery__img d-flex align-items-center" src="img/map.png" />
+                  <span>по городу</span>
+                </div>
+              </Col>
+            </Row>
+          </Container>
         </div>
       </Container>
     )

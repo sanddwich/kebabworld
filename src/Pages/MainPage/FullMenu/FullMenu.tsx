@@ -1251,7 +1251,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Брынза с зеленью',
               price: 0,
               weight: '',
-              ingredients: 'Сыр брынза , укроп, петрушка , кинза',
+              ingredients: 'Сыр брынза , укроп, петрушка , кинза, зеленый лук',
               image: '',
             },
             {
@@ -1365,7 +1365,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Брынза с зеленью',
               price: 0,
               weight: '',
-              ingredients: 'Сыр брынза , укроп, петрушка , кинза',
+              ingredients: 'Сыр брынза , укроп, петрушка , кинза, зеленый лук',
               image: '',
             },
             {
