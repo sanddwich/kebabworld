@@ -39,6 +39,11 @@ class Delivery extends React.Component<DeliveryProps, DeliveryState> {
                 <div className="delivery__action__text">Насладитесь вкусной и горячей едой </div>
               </div>
             </div>
+            <div className="row">
+              <div className="col-xs-12 delivery__string delivery__conditions">
+                Стоимость доставки: 100р. При заказе от 2000р. - БЕСПЛАТНО
+              </div>
+            </div>
           </div>
           <div className="col-lg-5">
             <img className="delivery__background image-fluid" style={{ zIndex: 10 }} src="img/fon/bg_car.png"></img>
