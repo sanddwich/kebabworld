@@ -81,7 +81,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             {
               id: Math.random(),
               name: 'из сёмги',
-              price: 190.0,
+              price: 180.0,
               weight: '1/100',
               ingredients: '',
               image: 'шашлык из семги.png',
@@ -89,7 +89,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             {
               id: Math.random(),
               name: 'из креветок',
-              price: 190.0,
+              price: 180.0,
               weight: '1/100',
               ingredients: '',
               image: 'креветки.png',
@@ -238,7 +238,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             {
               id: Math.random(),
               name: 'запеченный картофель',
-              price: 90.0,
+              price: 60.0,
               weight: '1 шампур',
               ingredients: '',
               image: 'картоха.png',
