@@ -17,4 +17,5 @@ export default interface Product {
   variants?: Variant[]
   weight: number | string
   price: number
+  new?: boolean
 }

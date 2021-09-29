@@ -80,20 +80,29 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             },
             {
               id: Math.random(),
+              name: 'из голени',
+              price: 60.0,
+              weight: '1/100',
+              ingredients: '',
+              image: 'no-photo.png',
+              new: true,
+            },
+            {
+              id: Math.random(),
               name: 'из сёмги',
               price: 180.0,
               weight: '1/100',
               ingredients: '',
               image: 'шашлык из семги.png',
             },
-            {
-              id: Math.random(),
-              name: 'из креветок',
-              price: 180.0,
-              weight: '1/100',
-              ingredients: '',
-              image: 'креветки.png',
-            },
+            // {
+            //   id: Math.random(),
+            //   name: 'из креветок',
+            //   price: 180.0,
+            //   weight: '1/100',
+            //   ingredients: '',
+            //   image: 'креветки.png',
+            // },
             // {
             //   id: Math.random(),
             //   name: 'из рыбы (сазан, сом, судак)',
@@ -156,6 +165,15 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               weight: '1/100',
               ingredients: '',
               image: 'говядина.png',
+            },            
+            {
+              id: Math.random(),
+              name: 'из говядины с грибами',
+              price: 105.0,
+              weight: '1/100',
+              ingredients: '',
+              image: 'no-photo.png',
+              new: true,
             },
             {
               id: Math.random(),
@@ -167,11 +185,30 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             },
             {
               id: Math.random(),
+              name: 'из курицы с сыром',
+              price: 95.0,
+              weight: '1/100',
+              ingredients: '',
+              image: 'no-photo.png',
+              new: true,
+            },
+            {
+              id: Math.random(),
               name: 'из свинины',
               price: 100.0,
               weight: '1/100',
               ingredients: '',
               image: 'свинина-1.png',
+            },
+            
+            {
+              id: Math.random(),
+              name: 'из свинины - говядины',
+              price: 90.0,
+              weight: '1/100',
+              ingredients: '',
+              image: 'no-photo.png',
+              new: true,
             },
             // {
             //   id: Math.random(),
@@ -1498,6 +1535,11 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
                         <Row key={product.id + index} className="FullMenu__item">
                           <Col xs={6} className="p-0 d-flex justify-content-start">
                             {product.name}
+                            {product.new && (
+                              <div className="newItem">
+                                Новинка
+                              </div>
+                            )}
                           </Col>
                           <Col xs={3} className="p-0 d-flex justify-content-center">
                             {product.weight}

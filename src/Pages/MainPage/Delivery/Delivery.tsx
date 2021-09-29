@@ -43,6 +43,7 @@ class Delivery extends React.Component<DeliveryProps, DeliveryState> {
               <div className="col-xs-12 delivery__string delivery__conditions">
                 Стоимость доставки: 100р. При заказе от 2000р. - БЕСПЛАТНО
               </div>
+              <div className="dddddd w-100">Минимальный заказ от 300гр.</div>
             </div>
           </div>
           <div className="col-lg-5">
