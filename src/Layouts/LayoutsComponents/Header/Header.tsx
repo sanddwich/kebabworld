@@ -77,7 +77,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                       </div>
                       <div className="FullMenuItem__description">
                         <time itemProp="openingHours" dateTime="Mo, Tu, We, Th, Fr, Sa, Su 11:00-24:00">
-                          Работаем с 11:00 до 00:00
+                          Работаем с 10:00 до 00:00
                         </time>
                       </div>
                     </div>

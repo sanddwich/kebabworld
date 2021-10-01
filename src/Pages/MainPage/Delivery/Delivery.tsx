@@ -108,6 +108,7 @@ class Delivery extends React.Component<DeliveryProps, DeliveryState> {
                   <img className="delivery__img" src="img/marker.png" />
                   <span>мкр-он Бабаевского, ул. Жилая 1</span>
                 </div>
+                <div className="delivery_descr">Время работы: 11:00 - 0:00</div>
               </Col>
               <Col className="p-0">
                 <div className="d-flex justify-content-start align-items-center">
@@ -123,6 +124,7 @@ class Delivery extends React.Component<DeliveryProps, DeliveryState> {
                   <img className="delivery__img" src="img/marker.png" />
                   <span>ул.Куликова 50в</span>
                 </div>
+                <div className="delivery_descr">Время работы: 10:00 - 23:00</div>
               </Col>
               <Col className="p-0">
                 <div className="d-flex justify-content-start align-items-center">

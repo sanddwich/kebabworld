@@ -295,7 +295,7 @@ class MobileHeader extends React.Component<MobileHeaderProps, MobileHeaderState>
               <div>
                 <div className="toggleMenu__title">77-30-77</div>
                 <div className="toggleMenu__title2">г. Астрахань, ул.Куликова 50в</div>
-                <div className="toggleMenu__title2">Работаем с 11:00 до 00:00</div>
+                <div className="toggleMenu__title2">Работаем с 10:00 до 23:00</div>
               </div>
             </Col>
           </Row>
