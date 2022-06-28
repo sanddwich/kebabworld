@@ -49,7 +49,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             },
             {
               id: Math.random(),
-              name: 'из баранины - ягненка',
+              name: 'из баранины - ягненок',
               price: 250.0,
               weight: '1/100',
               ingredients: '',
@@ -695,6 +695,15 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             //     'Копченая курица, помидоры. огурец, болгарский перец, лук красный, лист салата, майонез, украшается яйцом',
             //   image: 'салат из копченой курицы с овощами.png',
             // },
+            {
+              id: Math.random(),
+              name: 'Салат с копченым мясом и овощами',
+              price: 330.0,
+              weight: '1/200',
+              ingredients:
+                'Копченое мясо, помидоры. огурец, болгарский перец, лук красный, лист салата, майонез, украшается яйцом',
+              image: 'no-photo.png',
+            },
             {
               id: Math.random(),
               name: 'Восхитительный  микс',
