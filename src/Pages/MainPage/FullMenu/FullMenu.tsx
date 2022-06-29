@@ -1319,7 +1319,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
         // },
         {
           id: Math.random(),
-          name: 'Банкетное меню №1 (1000 руб./чел.)',
+          name: 'Банкетное меню №1 (1200 руб./чел.)',
           menuGroup: '',
           images: 'kebab.png',
           tags: 'banket',
@@ -1340,30 +1340,30 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               ingredients: '(из говядины, из курицы)',
               image: '',
             },
+            // {
+            //   id: Math.random(),
+            //   name: 'Запеченный картофель на мангале',
+            //   price: 0,
+            //   weight: '',
+            //   ingredients: '',
+            //   image: '',
+            // },
             {
               id: Math.random(),
-              name: 'Запеченный картофель на мангале',
+              name: 'Мясное ассорти',
               price: 0,
               weight: '',
-              ingredients: '',
+              ingredients: 'Салями, куриная грудка, куриный рулет, мясо копченное',
               image: '',
             },
-            {
-              id: Math.random(),
-              name: 'Мясная нарезка',
-              price: 0,
-              weight: '',
-              ingredients: 'Колбаса Салями, куриная грудка, говяжий язык, куриный рулет, горчица',
-              image: '',
-            },
-            {
-              id: Math.random(),
-              name: 'Селедка "по-астрахански"',
-              price: 0,
-              weight: '',
-              ingredients: 'Картошка, селедка, зеленый горошек, лимон, лук',
-              image: '',
-            },
+            // {
+            //   id: Math.random(),
+            //   name: 'Селедка "по-астрахански"',
+            //   price: 0,
+            //   weight: '',
+            //   ingredients: 'Картошка, селедка, зеленый горошек, лимон, лук',
+            //   image: '',
+            // },
             {
               id: Math.random(),
               name: 'Брынза с зеленью',
@@ -1374,10 +1374,10 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             },
             {
               id: Math.random(),
-              name: '2 салата на выбор из меню',
+              name: '2 салата на выбор',
               price: 0,
               weight: '',
-              ingredients: '',
+              ingredients: '«Шашлычный мир»/«Дамский каприз»/«Фаворит»/«Пёстрый»/«Салат с копчёным мясом и овощами»/«Принцесса»/«Южный»',
               image: '',
             },
             {
@@ -1386,7 +1386,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               price: 0,
               weight: '',
               ingredients:
-                'Соленые огурцы, помидоры, чеснок, черемша, капуста, морковь, цветная капуста, острый перец, стручковая фасоль',
+                'Соленые огурцы, помидоры, чеснок, черемша, капуста, морковь, цветная капуста, острый перец',
               image: '',
             },
             {
@@ -1415,7 +1415,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             },
             {
               id: Math.random(),
-              name: '3 соуса на выбор (красный, белый, чили)',
+              name: 'Два соуса на выбор (красный, белый, чили, грибной)',
               price: 0,
               weight: '',
               ingredients: '',
@@ -1425,7 +1425,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
         },
         {
           id: Math.random(),
-          name: 'Банкетное меню №2 (1200 руб./чел.)',
+          name: 'Банкетное меню №2 (1400 руб./чел.)',
           menuGroup: '',
           images: 'lulya.png',
           tags: 'banket',
@@ -1448,7 +1448,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             },
             {
               id: Math.random(),
-              name: 'Курица, запеченная на мангале / филе из курицы',
+              name: 'Куриные голени с картофелем',
               price: 0,
               weight: '',
               ingredients: '',
@@ -1456,10 +1456,10 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             },
             {
               id: Math.random(),
-              name: 'Мясная нарезка',
+              name: 'Мясное ассорти',
               price: 0,
               weight: '',
-              ingredients: 'Колбаса Салями, куриная грудка, говяжий язык, куриный рулет, горчица',
+              ingredients: 'Салями, куриная грудка, куриный рулет, мясо копчёное',
               image: '',
             },
             {
@@ -1472,7 +1472,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             },
             {
               id: Math.random(),
-              name: 'Селедка "по-астрахански"',
+              name: 'Сельдь "по-астрахански"',
               price: 0,
               weight: '',
               ingredients: 'Картошка, селедка, зеленый горошек, лимон, лук',
@@ -1480,10 +1480,10 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             },
             {
               id: Math.random(),
-              name: 'Брынза с зеленью',
+              name: 'Овощное ассорти с брынзой и зеленью',
               price: 0,
               weight: '',
-              ingredients: 'Сыр брынза , укроп, петрушка , кинза, зеленый лук',
+              ingredients: 'Помидоры, огурцы, перец болгарский, сыр брынза, лук зелёный, укроп, петрушка, кинза',
               image: '',
             },
             {
@@ -1511,14 +1511,14 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               ingredients: '',
               image: '',
             },
-            {
-              id: Math.random(),
-              name: 'Овощное ассорти',
-              price: 0,
-              weight: '',
-              ingredients: 'Помидоры, огурцы, перец болгарский, зелень, маслины, оливки',
-              image: '',
-            },
+            // {
+            //   id: Math.random(),
+            //   name: 'Овощное ассорти',
+            //   price: 0,
+            //   weight: '',
+            //   ingredients: 'Помидоры, огурцы, перец болгарский, зелень, маслины, оливки',
+            //   image: '',
+            // },
             {
               id: Math.random(),
               name: 'Фруктовое ассорти',
@@ -1537,7 +1537,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
             },
             {
               id: Math.random(),
-              name: '3 соуса на выбор (красный, белый, чили)',
+              name: 'Два соуса на выбор (красный, белый, чили, грибной)',
               price: 0,
               weight: '',
               ingredients: '',
