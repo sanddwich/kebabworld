@@ -1353,7 +1353,7 @@ class FullMenu extends React.Component<FullMenuProps, FullMenuState> {
               name: 'Мясное ассорти',
               price: 0,
               weight: '',
-              ingredients: 'Салями, куриная грудка, куриный рулет, мясо копченное',
+              ingredients: 'Салями, куриная грудка, куриный рулет, мясо копченое',
               image: '',
             },
             // {
